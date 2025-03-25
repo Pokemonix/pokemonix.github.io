@@ -1,0 +1,515 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Side - Buttons */
+.left-section,
+.right-section {
+    flex: 1;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.left-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.left-section .buttons button {
+    width: 280px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.left-section .buttons button i {
+    font-size: 1rem;
+    left: 30px;
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Right Side - Login Button */
+.right-section button {
+    background-color: #2a75bb;
+    color: white;
+    width: 350px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section button:hover {
+    background-color: #ffcb05;
+    color: #2a75bb;
+}
+
+.right-section button:active {
+    transform: translateY(2px);
+}
+
+.right-section button {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.right-section button:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.right-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ffcb05;
+    font-size: 3rem;
+    text-shadow: 2px 2px 0px #2a75bb;
+}
+
+h2 {
+    color: #2a75bb;
+    font-size: 2rem;
+}
+
+p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Logos */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#niantic {
+    width: 100px;
+    height: 100px;
+}
+
+#pokemonix {
+    width: 60px;
+    height: 60px;
+}
+
+.vl {
+    border-left: 2px solid #2a75bb;
+    height: 20px;
+}
+
+/* Form Styling */
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 90%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #2a75bb;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+
+/* Style for the Sign-in Buttons */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    width: 350px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Icons Style */
+button i {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 40px;
+}
+
+/* Apple Button */
+.apple {
+    background-color: #000;
+    color: white;
+}
+
+.apple:hover {
+    background-color: #333;
+}
+
+/* Facebook Button */
+.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.facebook:hover {
+    background-color: #1558b0;
+}
+
+/* Google Button */
+.google {
+    background-color: white;
+    color: #202124;
+    border: 1px solid #ccc;
+}
+
+.google i {
+    color: #4285f4;
+}
+
+.google:hover {
+    background-color: #f1f3f4;
+}
+
+/* Niantic Kids Button */
+.niantic {
+    background-color: #f4a261;
+    color: white;
+}
+
+.niantic:hover {
+    background-color: #e76f51;
+}
+
+/* Pokémon Trainer Club Button */
+.pokemon-club {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+.pokemon-club:hover {
+    background-color: #21867a;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+a {
+    color: #2a75bb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffcb05;
+}
+
+/* Container to center everything */
+.pokemonball-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 50px;
+    background-color: #e1f5fe;
+}
+
+.view {
+    position: relative;
+}
+
+/* Magic Dust Styling */
+div[class^="magic-dust"] {
+    position: absolute;
+    opacity: 0;
+    width: 6px;
+    height: 6px;
+    animation-name: magic-dust;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.sparks-container {
+    position: relative;
+    display: flex;
+    top: 120px;
+    transform: translateX(50%);
+}
+
+/* Colorful Magic Dust Effects */
+.magic-dust-1 {
+    left: -100px;
+    top: 1px;
+    border-color: #f44336;
+    border-radius: 50%;
+}
+
+.magic-dust-2 {
+    left: -70px;
+    top: -30px;
+    border-color: #00e676;
+    transform: rotateZ(45deg);
+    animation-delay: 50ms;
+}
+
+.magic-dust-3 {
+    left: -140px;
+    top: -90px;
+    border-color: #03a9f4;
+    animation-delay: 75ms;
+    border-radius: 50%;
+}
+
+.magic-dust-4 {
+    left: 50px;
+    top: -110px;
+    border-color: blue;
+    animation-delay: 100ms;
+    border-radius: 50%;
+}
+
+.magic-dust-5 {
+    left: 140px;
+    top: -90px;
+    border-color: #ffc107;
+    transform: rotateZ(45deg);
+    animation-delay: 125ms;
+}
+
+.magic-dust-6 {
+    left: -50px;
+    top: -150px;
+    border-color: #d500f9;
+    animation-delay: 150ms;
+    border-radius: 50%;
+}
+
+.magic-dust-7 {
+    left: 80px;
+    top: -30px;
+    border-color: #009688;
+    transform: rotateZ(45deg);
+    animation-delay: 175ms;
+    border-radius: 50%;
+}
+
+.magic-dust-8 {
+    left: 115px;
+    top: 5px;
+    border-color: #ff9800;
+    animation-delay: 200ms;
+    transform: rotateZ(45deg);
+}
+
+.magic-dust-9 {
+    left: 130px;
+    top: 50px;
+    border-color: purple;
+    animation-delay: 225ms;
+    border-radius: 50%;
+}
+
+.ball-and-shadow-view {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ball {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    animation-name: ball;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.shadow {
+    height: 10px;
+    width: 100px;
+    position: absolute;
+    border-radius: 100%;
+    background-color: #0288d1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: shadow;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+/* Poké Ball Design */
+.upper-half {
+    width: 100%;
+    height: 50%;
+    background: red;
+    border: 10px solid black;
+    border-bottom-width: 5px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-sizing: border-box;
+}
+
+.lower-half {
+    height: 50%;
+    width: 100%;
+    background: white;
+    border: 10px solid black;
+    border-top-width: 5px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-sizing: border-box;
+}
+
+.circle {
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    width: 25px;
+    height: 25px;
+    border: 10px solid black;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation-name: circle;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+/* Animations */
+
+/* Circle Animation */
+@keyframes circle {
+
+    0%,
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    50% {
+        left: 50%;
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+/* Ball Bounce Animation */
+@keyframes ball {
+
+    0%,
+    100% {
+        transform: translateY(0%);
+    }
+
+    25% {
+        transform: translateY(-25%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+
+    75% {
+        transform: translateY(-10%);
+    }
+}
+
+/* Shadow Animation */
+@keyframes shadow {
+
+    0%,
+    100% {
+        width: 150px;
+    }
+
+    25% {
+        width: 75px;
+    }
+
+    50% {
+        width: 150px;
+    }
+
+    75% {
+        width: 100px;
+    }
+}
+
+/* Magic Dust Animation */
+@keyframes magic-dust {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(calc(80px * (random() - 0.5)),
+                calc(80px * (random() - 0.5))) scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(calc(150px * (random() - 0.5)),
+                calc(150px * (random() - 0.5))) scale(0.8);
+        opacity: 0;
+    }
+}

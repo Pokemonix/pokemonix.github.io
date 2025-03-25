@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Pokémon Go - Login</title>
+    <link rel="stylesheet" href="style-login.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left-section">
+            <!-- Poké Ball Animation -->
+            <div class="pokeball-container">
+                <div class="view">
+                    <div class="sparks-container">
+                        <div class="magic-dust-1"></div>
+                        <div class="magic-dust-2"></div>
+                        <div class="magic-dust-3"></div>
+                        <div class="magic-dust-4"></div>
+                        <div class="magic-dust-5"></div>
+                        <div class="magic-dust-6"></div>
+                        <div class="magic-dust-7"></div>
+                        <div class="magic-dust-8"></div>
+                    </div>
+                    <div class="ball-and-shadow-view">
+                        <div class="shadow"></div>
+                        <div class="ball">
+                            <div class="upper-half"></div>
+                            <div class="lower-half"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign-in Buttons -->
+            <p>Or sign in using one of these options:</p>
+            <div class="buttons">
+                <button class="apple" onclick="displayMessage('Apple')">
+                    <i class="fa-brands fa-apple"></i> Sign in with Apple
+                </button>
+                <button class="facebook" onclick="displayMessage('Facebook')">
+                    <i class="fa-brands fa-facebook-f"></i> Sign in with Facebook
+                </button>
+                <button class="google" onclick="displayMessage('Google')">
+                    <i class="fa-brands fa-google"></i> Sign in with Google
+                </button>
+                <button class="niantic" onclick="displayMessage('Niantic Kids')">Sign in with Niantic Kids</button>
+                <button class="pokemon-club" onclick="displayMessage('Pokémon Trainer Club')">Sign in with Pokémon
+                    Trainer Club</button>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-section">
+            <div class="login-container">
+                <!-- Niantic Logo and Pokemonix -->
+                <div class="logo">
+                    <img id="niantic" src="img/niantic-logo.png" alt="Niantic Logo" />
+                    <div class="vl"></div>
+                    <img id="pokemonix" src="img/pokemonix-logo.png" alt="Pokemonix" />
+                </div>
+                <h2>Sign In</h2>
+                <input type="email" id="email" placeholder="Email" />
+                <input type="password" id="password" placeholder="Password" />
+                <button onclick="login()">Login</button>
+                <p>Don't have a Pokémon GO account? <a href="registration/registration.html">Make one today!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-login.js"></script>
+</body>
+
+</html>
