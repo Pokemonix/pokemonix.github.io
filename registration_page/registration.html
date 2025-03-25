@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>Pokémon Go - Register</title>
+  <link rel="stylesheet" href="style-registration.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-container">
+      <div class="logo">
+        <img id="niantic" src="img/niantic-logo.png" alt="Niantic Logo" />
+        <div class="vl"></div>
+        <img id="pokemonix" src="img/pokemonix-logo.png" alt="Pokemonix" />
+      </div>
+      <h2>Register</h2>
+      <input type="email" id="email" placeholder="Email" required />
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Password" required />
+        <i class="fa fa-eye" id="togglePassword"></i>
+      </div>
+      <div class="password-container">
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+        <i class="fa fa-eye" id="toggleConfirmPassword"></i>
+      </div>
+      <input type="text" id="player-id" placeholder="Player ID" readonly />
+      <input type="text" id="ign" placeholder="In-Game Name" required />
+      <button onclick="register()">Register</button>
+      <p>Already have an account? <a href="index.html">Sign in here</a></p>
+    </div>
+  </div>
+
+  <script src="script-registration.js"></script>
+</body>
+
+</html>
