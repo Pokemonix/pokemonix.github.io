@@ -15,6 +15,7 @@
   --white-color: #909090;
   --loader-color: #b32525;
   --default-text-color: white;
+  --secondary-text-color: #000000;
   --default-font: "Open Sans", serif;
   --background: #5d5d5d;
   --navbar-width: 256px;
@@ -305,4 +306,9 @@ main {
     margin-left: 50px; /* add space */
     font-family: "Afacad Flux", serif;
     color: var(--default-text-color);
+}
+
+/*Cart Content*/
+.cart, .cart-items{
+  color: var(--secondary-text-color);
 }

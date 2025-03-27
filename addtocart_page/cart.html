@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/homepage/styles/default.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <script
+    src="https://kit.fontawesome.com/e9625646b7.js"crossorigin="anonymous"></script>
 </head>
 <body>
+ <!--NAVBAR-->
   <div id="nav-bar">
     <input id="nav-toggle" type="checkbox" checked/>
     <div id="nav-header">
@@ -23,14 +27,11 @@
         <i class="fas fa-house-chimney"></i><span>Home</span>
       </div>
 
-
       <div class="nav-button" onclick="navigateTo('pages/products.html')">
         
         <i class="fas fa-box"></i><span>Cart</span>
         <span class="cart-item-count"></span>
       </div>
-
-
 
       <div class="nav-button" onclick="navigateTo('pages/contact.html')">
         <i class="fas fa-comment"></i><span>Contact</span>
@@ -43,26 +44,39 @@
     </div>
   </div>
 
-      <div class="cart">
+ <!--CART DETAILS-->
+    <div class="cart">
+      <div class="order-text"><i class="bi bi-cart"></i><p>ORDER DETAILS</p></div>
         <div class="cart-header">
-          <span>Products</span>
-          <span>Price</span>
-          <span>Quantity</span>
-          <span>Total</span>
-          <span>Remove</span>
+          <span>PRODUCT</span>
+          <span>PRICE</span>
+          <span>QUANTITY</span>
+          <span>TOTAL</span>
+          <span></span>
         </div>
 
         <div class="cart-items">
         </div>
-            <div class="cart-total">
-                <h3>Cart Total</h3>
-                <p>Subtotal <span class="subtotal">$0</span></p>
-                <p>Delivery Fee <span>Free</span></p>
-                <p>Grand Total <span class="grand-total">$0</span></p>
-                <button class="btn">Proceed to Checkout</button>
-          </div> 
+
+        <div class="row-container">
+          
+            <div class="promo-code">
+                <input type="text" placeholder="Promo Code">
+                <button>APPLY CODE</button>
+            </div>
+              
+            <div class="cart-summary">
+              <h3>ORDER  SUMMARY</h3>
+              <div class="cart-total">
+                  <p>Subtotal <span class="subtotal">₱0</span></p>
+                  <p>Shipping Fee <span>Free</span></p>
+                  <p>Grand Total <span class="grand-total">₱0</span></p> 
+                  <button class="checkout-btn">CHECKOUT</button>
+              </div>
+          </div>
       </div>
+    </div>
       
-      <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -11,123 +11,119 @@ if (productContainer) {
     displayCart();
 }
 
-/* home page product list */
-function displayProducts() {
-    products.forEach(product => {
-        const productCard = document.createElement("div");
-        productCard.classList.add("product-card");
-        productCard.innerHTML = `
-      <div class="img-box">
-        <img src="${product.colors[0].mainImage}">
-      </div>
-      <h2 class="title">${product.title}</h2>
-      <span class="price">${product.price}</span>
-    `;
-        productContainer.appendChild(productCard);
+// /* home page product list */
+// function displayProducts() {
+//     products.forEach(product => {
+//         const productCard = document.createElement("div");
+//         productCard.classList.add("product-card");
+//         productCard.innerHTML = `
+//       <div class="img-box">
+//         <img src="${product.colors[0].mainImage}">
+//       </div>
+//       <h2 class="title">${product.title}</h2>
+//       <span class="price">${product.price}</span>
+//     `;
+//         productContainer.appendChild(productCard);
 
-        const imgBox = productCard.querySelector(".img-box");
-        imgBox.addEventListener("click", () => {
-            sessionStorage.setItem("selectedProduct", JSON.stringify(product));
-            window.location.href = "product-detail.html";
-        });
-    });
-}
+//         const imgBox = productCard.querySelector(".img-box");
+//         imgBox.addEventListener("click", () => {
+//             sessionStorage.setItem("selectedProduct", JSON.stringify(product));
+//             window.location.href = "product-detail.html";
+//         });
+//     });
+// }
 
-function displayProductDetail() {
-    const productData = JSON.parse(sessionStorage.getItem("selectedProduct"));
+// function displayProductDetail() {
+//     const productData = JSON.parse(sessionStorage.getItem("selectedProduct"));
 
-    const titleEl = document.querySelector(".title");
-    const priceEl = document.querySelector(".price");
-    const descriptionEl = document.querySelector(".description");
-    const mainImageContainer = document.querySelector(".main-img");
-    const thumbnailContainer = document.querySelector(".thumbnail-list");
-    const colorContainer = document.querySelector(".color-options");
-    const sizeContainer = document.querySelector(".size-options");
-    const addToCartBtn = document.querySelector("#add-cart-btn");
+//     const titleEl = document.querySelector(".title");
+//     const priceEl = document.querySelector(".price");
+//     const descriptionEl = document.querySelector(".description");
+//     const mainImageContainer = document.querySelector(".main-img");
+//     const thumbnailContainer = document.querySelector(".thumbnail-list");
+//     const addToCartBtn = document.querySelector("#add-cart-btn");
 
-    let selectedColor = productData.colors[0];
-    let selectedSize = selectedColor.sizes[0];
+//     let selectedColor = productData.colors[0];
+//     let selectedSize = selectedColor.sizes[0];
 
-    function updateProductDisplay(colorData) {
-        if (!colorData.sizes.includes(selectedSize)) {
-            selectedSize = colorData.sizes[0];
-        }
-        mainImageContainer.innerHTML = `<img src="${colorData.mainImage}">`;
+//     function updateProductDisplay(colorData) {
+//         if (!colorData.sizes.includes(selectedSize)) {
+//             selectedSize = colorData.sizes[0];
+//         }
+//         mainImageContainer.innerHTML = `<img src="${colorData.mainImage}">`;
 
-        thumbnailContainer.innerHTML = "";
-        const allThumbnails = [colorData.mainImage].concat(colorData.thumbnails.slice(0, 3));
-        allThumbnails.forEach(thumb => {
-            const img = document.createElement("img");
-            img.src = thumb;
+//         thumbnailContainer.innerHTML = "";
+//         const allThumbnails = [colorData.mainImage].concat(colorData.thumbnails.slice(0, 3));
+//         allThumbnails.forEach(thumb => {
+//             const img = document.createElement("img");
+//             img.src = thumb;
 
-            thumbnailContainer.appendChild(img);
+//             thumbnailContainer.appendChild(img);
 
-            img.addEventListener("click", () => {
-                mainImageContainer.innerHTML = `<img src="${thumb}">`;
-            });
-        });
-        colorContainer.innerHTML = "";
+//             img.addEventListener("click", () => {
+//                 mainImageContainer.innerHTML = `<img src="${thumb}">`;
+//             });
+//         });
+//         colorContainer.innerHTML = "";
 
-        productData.colors.forEach(color => {
-            const img = document.createElement("img");
-            img.src = color.mainImage;
-            if (color.name === colorData.name) img.classList.add("selected");
+//         productData.colors.forEach(color => {
+//             const img = document.createElement("img");
+//             img.src = color.mainImage;
+//             if (color.name === colorData.name) img.classList.add("selected");
 
-            colorContainer.appendChild(img);
+//             colorContainer.appendChild(img);
 
-            img.addEventListener("click", () => {
-                selectedColor = color;
-                updateProductDisplay(color);
-            });
-        });
-        colorContainer.innerHTML = "";
+//             img.addEventListener("click", () => {
+//                 selectedColor = color;
+//                 updateProductDisplay(color);
+//             });
+//         });
+//         colorContainer.innerHTML = "";
 
-        productData.colors.forEach(color => {
-            const img = document.createElement("img");
-            img.src = color.mainImage;
-            if (color.name === colorData.name) img.classList.add("selected");
+//         productData.colors.forEach(color => {
+//             const img = document.createElement("img");
+//             img.src = color.mainImage;
+//             if (color.name === colorData.name) img.classList.add("selected");
 
-            colorContainer.appendChild(img);
+//             colorContainer.appendChild(img);
 
-            img.addEventListener("click", () => {
-                selectedColor = color;
-                updateProductDisplay(color);
-            });
-        });
-    }
-    titleEl.textContent = productData.title;
-    priceEl.textContent = productData.price;
-    descriptionEl.textContent = productData.description;
+//             img.addEventListener("click", () => {
+//                 selectedColor = color;
+//                 updateProductDisplay(color);
+//             });
+//         });
+//     }
+//     titleEl.textContent = productData.title;
+//     priceEl.textContent = productData.price;
+//     descriptionEl.textContent = productData.description;
 
-    updateProductDisplay(selectedColor);
+//     updateProductDisplay(selectedColor);
 
-    addToCartBtn.addEventListener("click", () => {
-        addToCart(productData, selectedColor, selectedSize);
-    });
-}
+//     addToCartBtn.addEventListener("click", () => {
+//         addToCart(productData, selectedColor, selectedSize);
+//     });
+// }
 
-function addToCart(product, color, size) {
-    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+// function addToCart(product, color, size) {
+//     let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
   
-    const existingItem = cart.find(item => item.id === product.id && item.color === color.name && item.size === size);
+//     const existingItem = cart.find(item => item.id === product.id && item.color === color.name && item.size === size);
   
-    if (existingItem) {
-      existingItem.quantity += 1;
-    } else {
-      cart.push({
-        id: product.id,
-        title: product.title,
-        price: product.price,
-        image: color.mainImage,
-        color: color.name,
-        size: size,
-        quantity: 1
-      });
-    }
-    sessionStorage.setItem("cart", JSON.stringify(cart));
+//     if (existingItem) {
+//       existingItem.quantity += 1;
+//     } else {
+//       cart.push({
+//         id: product.id,
+//         title: product.title,
+//         price: product.price,
+//         image: color.mainImage,
+//         quantity: 1
+//       });
+//     }
+//     sessionStorage.setItem("cart", JSON.stringify(cart));
     
-    updateCartBadge();
-  }
+//     updateCartBadge();
+//   }
 
 /*cart items display */
 function displayCart() {
@@ -158,21 +154,17 @@ function displayCart() {
                 <img src="${item.image}">
                 <div class="item-detail">
                 <p>${item.title}</p>
-                <div class="size-color-box">
-                    <span class="size">${item.size}</span>
-                    <span class="color">${item.color}</span>
-                </div>
                 </div>
             </div>
             <span class="price">${item.price}</span>
             <div class="quantity"><input type="number" value="${item.quantity}" min="1" data-index="${index}"></div>
             <span class="total-price">${itemTotal}</span>
-            <button class="remove" data-index="${index}"><i class="ri-close-line"></i></button>
+            <button class="remove" data-index="${index}"><i class="bi bi-trash"></i></button>
         `;
         cartItemsContainer.appendChild(cartItem);
     });
-    subtotalEl.textContent = `$$${subtotal.toFixed(2)}`;
-    grandTotalEl.textContent = `$$${subtotal.toFixed(2)}`;
+    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    grandTotalEl.textContent = `$${subtotal.toFixed(2)}`;
 
     removeCartItem();
     updateCartQuantity();

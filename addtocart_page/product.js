@@ -1,3 +1,5 @@
+/*JS FOR HOMEPAGE PRODUCT DETAILS (REFERENCE ONLY)*/
+
 const products = [
     {
         id: 1,
