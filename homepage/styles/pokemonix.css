@@ -1,0 +1,365 @@
+main {
+    margin-left: var(--navbar-width-min);
+    transition: margin-left 0.2s;
+    font-family: "Afacad Flux", serif;
+    color: var(--default-text-color);
+  }
+  
+  #nav-toggle:not(:checked) ~ main {
+    margin-left: var(--navbar-width);
+  }
+  
+  /* Carousel styling */
+  .intro-greeting {
+    height: auto;
+    min-height: 300px;
+    background: linear-gradient(to right, #869ed4, #d18e8c);
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .carousel-item {
+    height: 400px;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .carousel-caption {
+    background-color: #00000080;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+ /* Featured Items Section */
+.featured-items {
+  padding: 60px 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.featured-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px #0000001a;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.featured-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.featured-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; 
+  padding: 10px; 
+  background-color: #f9f9f9; 
+}
+
+.featured-item-content {
+  padding: 15px;
+}
+
+.featured-item-price {
+  font-weight: bold;
+  color: #ff3e3e;
+  font-size: 1.1rem;
+}
+
+.featured-item-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  min-height: 50px;
+}
+
+.featured-items h2 {
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.featured-items h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #3466AF;
+}
+
+/* Category Slider for Featured Items */
+.category-slider {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.category-btn.active {
+  background-color: #3466AF;
+  color: white;
+  border-color: #2a559c;
+}
+
+/* Category Content Styling */
+.category-content {
+  display: none;
+}
+
+.category-content.active {
+  display: block;
+}
+
+/* Enhanced Featured Items Styling */
+.featured-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.featured-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.featured-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; 
+  padding: 10px; 
+  background-color: #f9f9f9; 
+}
+
+/* Pokecoin Items Styling */
+#pokecoins .featured-item img {
+  height: 180px;
+  background-color: #f0f8ff;
+}
+
+/* Daily Bundle Styling */
+.daily-bundle {
+  border: 2px solid #ff3e3e;
+  transition: all 0.3s ease;
+}
+
+.daily-bundle:hover {
+  box-shadow: 0 10px 20px rgba(255, 62, 62, 0.3);
+}
+
+.daily-bundle img {
+  height: 250px;
+}
+
+.daily-bundle-header {
+  background: linear-gradient(135deg, #ff3e3e, #ff7676);
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.daily-bundle-header h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.bundle-contents {
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.bundle-contents ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin: 0;
+}
+
+.discount-tag {
+  background-color: #ff3e3e;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.timer-section {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.countdown {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #pokecoins .col-md-4 {
+    margin-bottom: 20px;
+  }
+  
+  .daily-bundle {
+    max-width: 100%;
+  }
+}
+  
+  /* Projects/Collections Section */
+  .body-projects {
+    min-height: 500px;
+    width: 100%;
+    background: #141414;
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .body-projects img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #0000004d;
+  }
+  
+  /* Contact Section */
+  .body-contact {
+    min-height: 500px;
+    width: 100%;
+    background: #393939;
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .body-contact .input-group {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .body-contact .btn-primary {
+    background-color: #3466AF;
+    border-color: #3466AF;
+  }
+  
+  .body-contact .btn-primary:hover {
+    background-color: #2a559c;
+    border-color: #2a559c;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .carousel-item {
+      height: 300px;
+    }
+    
+    .featured-item-title {
+      min-height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item {
+      height: 250px;
+    }
+    
+    .carousel-caption {
+      padding: 10px;
+    }
+    
+    .carousel-caption h2 {
+      font-size: 1.5rem;
+    }
+    
+    .featured-items .col-md-3 {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Fix for images in carousel */
+  .carousel-inner {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .carousel-inner img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* To ensure images are visible with proper dimensions */
+  .carousel-img-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Footer styling */
+.footer {
+    background-color: #141414;
+    color: #f8f9fa;
+    padding: 30px 0;
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .copyright-disclaimer {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #3466AF;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #4e7bc7;
+    text-decoration: underline;
+  }
