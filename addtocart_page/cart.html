@@ -69,14 +69,62 @@
               <h3>ORDER  SUMMARY</h3>
               <div class="cart-total">
                   <p>Subtotal <span class="subtotal">₱0</span></p>
-                  <p>Shipping Fee <span>Free</span></p>
                   <p>Grand Total <span class="grand-total">₱0</span></p> 
                   <button class="checkout-btn">CHECKOUT</button>
               </div>
           </div>
       </div>
-    </div>
-      
+
+       <!--PAYMENT METHOD-->
+       <section class="payment-section">
+        <div class="payment-container">
+            <div class="payment-right">
+                <form action="" class="payment-form">
+                    <h1 class="payment-title">Payment Details</h1>
+                    <div class="payment-method">
+                        <input type="radio" name="payment-method" id="method-1" checked>
+                        <label for="method-1" class="payment-method-item">
+                            <img src="images/visa.png" alt="">
+                        </label>
+                        <input type="radio" name="payment-method" id="method-2">
+                        <label for="method-2" class="payment-method-item">
+                            <img src="images/mastercard.png" alt="">
+                        </label>
+                        <input type="radio" name="payment-method" id="method-3">
+                        <label for="method-3" class="payment-method-item">
+                            <img src="images/paypal.png" alt="">
+                        </label>
+                        <input type="radio" name="payment-method" id="method-4">
+                        <label for="method-4" class="payment-method-item">
+                            <img src="images/stripe.png" alt="">
+                        </label>
+                    </div>
+                    <div class="payment-form-group">
+                        <input type="email" placeholder=" " class="payment-form-control" id="email">
+                        <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+                    </div>
+                    <div class="payment-form-group">
+                        <input type="text" placeholder=" " class="payment-form-control" id="card-number">
+                        <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
+                    </div>
+                    <div class="payment-form-group-flex">
+                        <div class="payment-form-group">
+                            <input type="date" placeholder=" " class="payment-form-control" id="expiry-date">
+                            <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="text" placeholder=" " class="payment-form-control" id="cvv">
+                            <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+   
     <script src="script.js"></script>
+    <script src="checkout.js"></script>
 </body>
 </html>
