@@ -11,17 +11,17 @@
 
 :root {
   font-size: 16px;
-  --background-color: #070707;
+  --background-color: white;
   --white-color: #909090;
   --loader-color: #b32525;
-  --default-text-color: #e1e1e1;
+  --default-text-color: black;
   --default-font: "Open Sans", serif;
   --background: #5d5d5d;
   --navbar-width: 256px;
   --navbar-width-min: 80px;
-  --navbar-bg-color: #1b1b1b; 
+  --navbar-bg-color: #1c2c5f; /*navbar container color*/
   --navbar-dark-secondary: #292929;
-  --navbar-light-primary: #f5f6fa;
+  --navbar-light-primary: #f5f6fa; 
   --navbar-light-secondary: #8392a5;
   --navbar-text-color: #FFFFFF; 
 }

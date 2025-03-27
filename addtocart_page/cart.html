@@ -5,18 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/homepage/styles/default.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">Ecommerce.</a>
-    
-        <a href="cart.html" class="cart-icon">
-          <i class="ri-shopping-bag-line"></i>
-          <span class="cart-item-count"></span>
-        </a>
+  <div id="nav-bar">
+    <input id="nav-toggle" type="checkbox" checked/>
+    <div id="nav-header">
+      <a id="nav-title" href="#" target="_blank"
+        ><i class="fas fa-shopping-cart"></i> Pokemonix</a
+      >
+      <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+
+    </div>
+    <div id="nav-content">
+      <div class="nav-button" onclick="navigateTo('index.html')">
+        <i class="fas fa-house-chimney"></i><span>Home</span>
+      </div>
+
+
+      <div class="nav-button" onclick="navigateTo('pages/products.html')">
         
-      </nav>
+        <i class="fas fa-box"></i><span>Cart</span>
+        <span class="cart-item-count"></span>
+      </div>
+
+
+
+      <div class="nav-button" onclick="navigateTo('pages/contact.html')">
+        <i class="fas fa-comment"></i><span>Contact</span>
+      </div>
+      <div class="nav-button" onclick="navigateTo('pages/about.html')">
+        <i class="fas fa-user"></i><span>About</span>
+      </div>
+
+      <div id="nav-content-highlight"></div>
+    </div>
+  </div>
 
       <div class="cart">
         <div class="cart-header">
