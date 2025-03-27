@@ -79,8 +79,8 @@ function navigateTo(url) {
         console.log(`Added to cart: ${itemTitle} - ${itemPrice}`);
         
         // Change button text temporarily to show feedback
-        const originalText = button.textContent;
-        button.textContent = 'Added to Cart!';
+
+
         button.classList.add('btn-success');
         button.classList.remove('btn-outline-dark');
         
@@ -165,27 +165,91 @@ function initializeAddToCartButtons() {
       
       // You could add actual cart functionality here
       console.log(`Added to cart: ${itemTitle} - ${itemPrice}`);
-      
-      // Change button text temporarily to show feedback
-      const originalText = newButton.textContent;
-      newButton.textContent = 'Added to Cart!';
-      newButton.classList.add('btn-success');
-      newButton.classList.remove('btn-outline-dark');
-      newButton.classList.remove('btn-danger'); // For daily bundle button
-      
-      // Reset button after 2 seconds
-      setTimeout(() => {
-        newButton.textContent = originalText;
-        newButton.classList.remove('btn-success');
-        
-        // Check if it's a daily bundle button (which uses btn-danger)
-        if (itemContainer.classList.contains('daily-bundle')) {
-          newButton.classList.add('btn-danger');
-        } else {
-          newButton.classList.add('btn-outline-dark');
-        }
-      }, 2000);
     });
   });
 }
 
+function showModal(name, description, price, imageSrc) {
+  // Create modal elements
+  const modal = document.createElement('div');
+  modal.classList.add('product-modal');
+  
+  const modalContent = document.createElement('div');
+  modalContent.classList.add('product-modal-content');
+  
+  // Close button
+  const closeBtn = document.createElement('span');
+  closeBtn.classList.add('product-modal-close');
+  closeBtn.innerHTML = '&times;';
+  closeBtn.onclick = () => document.body.removeChild(modal);
+  
+  // Image section
+  const imageDiv = document.createElement('div');
+  imageDiv.classList.add('product-modal-image');
+  const image = document.createElement('img');
+  image.src = imageSrc;
+  image.alt = name;
+  imageDiv.appendChild(image);
+  
+  // Details section
+  const detailsDiv = document.createElement('div');
+  detailsDiv.classList.add('product-modal-details');
+  
+  const title = document.createElement('h3');
+  title.textContent = name;
+  
+  const priceElement = document.createElement('div');
+  priceElement.classList.add('product-modal-price');
+  priceElement.textContent = price;
+  
+  const descriptionElement = document.createElement('p');
+  descriptionElement.textContent = description;
+  
+  const addToCartBtn = document.createElement('button');
+  addToCartBtn.classList.add('btn', 'btn-primary', 'w-100', 'mt-3');
+  addToCartBtn.textContent = 'Add to Cart';
+  addToCartBtn.onclick = () => {
+    addToCart({name, description, price, imageSrc});
+    document.body.removeChild(modal);
+  };
+  
+  // Assemble modal content
+  detailsDiv.append(title, priceElement, descriptionElement, addToCartBtn);
+  modalContent.append(closeBtn, imageDiv, detailsDiv);
+  modal.appendChild(modalContent);
+  
+  // Add to body
+  document.body.appendChild(modal);
+}
+
+let cartItems = [];
+
+function addToCart(item) {
+  // Add item to cart
+  cartItems.push(item);
+  
+  // Update cart item count
+  const cartItemCountElement = document.querySelector('.cart-item-count');
+  if (cartItemCountElement) {
+    cartItemCountElement.textContent = cartItems.length;
+    cartItemCountElement.classList.add('active');
+  }
+  
+  // Show cart notification
+  showCartNotification(item);
+}
+
+function showCartNotification(item) {
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.classList.add('cart-notification');
+  notification.textContent = '+1';
+  
+  // Add to body
+  document.body.appendChild(notification);
+  
+  // Remove notification after animation
+  setTimeout(() => {
+    document.body.removeChild(notification);
+  }, 3000);
+}
