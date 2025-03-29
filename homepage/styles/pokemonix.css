@@ -1,3 +1,4 @@
+/*  The following code here uses bootstrap templates */
 main {
     margin-left: var(--navbar-width-min);
     transition: margin-left 0.2s;
@@ -430,10 +431,10 @@ main {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #c25a40;
+    background-color: #ff3e3e;
     color: white;
-    width: 25px;
-    height: 25px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -474,3 +475,379 @@ main {
   .cart-item-count.active {
     opacity: 1;
   }
+
+  .col-md-3 {
+    cursor: pointer;
+  }
+
+  /* Updated Modal Styles to Match Cards */
+.product-modal-content {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+}
+
+.product-modal-header {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #666;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.product-modal-close:hover {
+  color: #ff3e3e;
+}
+
+.product-modal-image {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-modal-image img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.product-modal-details {
+  padding: 20px;
+}
+
+.product-modal-details h3 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-modal-description {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.product-modal-price {
+  font-weight: bold;
+  color: #ff3e3e;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.product-modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.product-modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #3466AF;
+  color: white;
+  border: none;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2a559c;
+}
+
+.continue-shopping-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Pokemon-themed Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  transition: all 0.3s ease;
+  width: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #acacac70;
+  box-shadow: 0 4px 12px #0000004d;
+  border-color: #ff3e3e;
+}
+
+/* Custom Pokeball-styled icons for prev/next */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-image: none;
+  position: relative;
+}
+
+.carousel-control-prev-icon::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ff3e3e 0%, #ff3e3e 50%, #fff 50%, #fff 100%);
+  border: 2px solid #333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-control-next-icon::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ff3e3e 0%, #ff3e3e 50%, #fff 50%, #fff 100%);
+  border: 2px solid #333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-control-prev-icon::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-left: 3px solid #333;
+  border-bottom: 3px solid #333;
+  transform: translate(-30%, -50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+
+.carousel-control-next-icon::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-right: 3px solid #333;
+  border-top: 3px solid #333;
+  transform: translate(-70%, -50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+
+/* Pokeball center button */
+.carousel-control-prev-icon::before::after,
+.carousel-control-next-icon::before::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Pokemon-themed Carousel Indicators */
+.carousel-indicators button {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+
+  border: 2px solid #3466AF !important;
+  opacity: 0.8;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  width: 30px;
+  height: 4px;
+  background-color: #ff3e3e;
+  border: 2px solid #fff !important;
+  opacity: 1;
+
+}
+
+/* Pokemon-styled Shop Now buttons */
+.carousel-caption .btn {
+  background: linear-gradient(135deg, #3466AF, #2a559c);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid #FFF;
+}
+
+.carousel-caption .btn:hover {
+  background: linear-gradient(135deg, #ff3e3e, #e63535);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption .btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover:before {
+  opacity: 1;
+}
+
+.carousel-caption .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Make carousel captions more Pokemon-themed */
+.carousel-caption {
+  background-color: rgba(52, 102, 175, 0.8);
+  border: 3px solid white;
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption h2 {
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding-left: 30px;
+}
+
+.carousel-caption h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #ff3e3e 0%, #ff3e3e 50%, #fff 50%, #fff 100%);
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.carousel-caption p {
+  color: #f0f0f0;
+  font-weight: 500;
+}
+
+/* Carousel Responsiveness */
+/* Responsive adjustments for Pokemon UI */
+@media (max-width: 992px) {
+
+  
+  .carousel-caption h2::before {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .carousel-caption {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 1.2rem;
+    padding-left: 25px;
+  }
+  
+  .carousel-caption h2::before {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .carousel-caption {
+    padding: 10px;
+  }
+  
+  .carousel-caption .btn {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption {
+    display: block !important;  /* Override Bootstrap's d-none */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .carousel-indicators {
+    bottom: 60px;
+  }
+  
+  .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+}

@@ -1,6 +1,7 @@
 /* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
+/* Base Styles */
 body {
     font-family: "Inter", sans-serif;
     background-color: #f0f8ff;
@@ -12,17 +13,20 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 50px;
-    padding: 50px;
+    padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 /* Left Side - Buttons */
 .left-section,
 .right-section {
     flex: 1;
+    min-width: 300px;
+    justify-content: space-between;
 }
 
 .left-section {
@@ -39,7 +43,8 @@ body {
 }
 
 .left-section .buttons button {
-    width: 280px;
+    width: 100%;
+    max-width: 350px;
     padding: 10px 20px;
     font-size: 0.9rem;
 }
@@ -57,9 +62,10 @@ body {
 
 /* Right Side - Login Button */
 .right-section button {
-    background-color: #2a75bb;
+    background-color: #21386e;
     color: white;
-    width: 350px;
+    width: 100%;
+    max-width: 500px;
     padding: 12px 25px;
     font-size: 1rem;
     border-radius: 30px;
@@ -74,7 +80,7 @@ body {
 
 .right-section button:hover {
     background-color: #ffcb05;
-    color: #2a75bb;
+    color: #21386e;
 }
 
 .right-section button:active {
@@ -95,20 +101,24 @@ body {
     margin-bottom: 20px;
 }
 
+.right-section a {
+    color: #21386e;
+}
+
 h1 {
     color: #ffcb05;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-shadow: 2px 2px 0px #2a75bb;
 }
 
 h2 {
-    color: #2a75bb;
-    font-size: 2rem;
+    color: #21386e;
+    font-size: 1.8rem;
 }
 
 p {
     color: #555;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 /* Logos */
@@ -116,18 +126,18 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
 }
 
 #niantic {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 #pokemonix {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 .vl {
@@ -141,7 +151,8 @@ p {
     padding: 30px;
     border-radius: 20px;
     display: inline-block;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -149,7 +160,7 @@ input {
     width: 90%;
     padding: 15px;
     margin: 12px 0;
-    border: 2px solid #2a75bb;
+    border: 2px solid #21386e;;
     border-radius: 10px;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
@@ -161,10 +172,13 @@ input {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100%;
+    max-width: 350px;
 }
 
 button {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     padding: 12px 25px;
     font-size: 1rem;
     border-radius: 30px;
@@ -256,17 +270,21 @@ a:hover {
 }
 
 /* Container to center everything */
-.pokemonball-container {
+.pokeball-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    height: 50px;
-    background-color: #e1f5fe;
+    height: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .view {
     position: relative;
+    width: 900px; 
+    height: 200px; 
+    margin: 0 auto;
 }
 
 /* Magic Dust Styling */
@@ -284,39 +302,41 @@ div[class^="magic-dust"] {
 }
 
 .sparks-container {
-    position: relative;
-    display: flex;
-    top: 120px;
-    transform: translateX(50%);
+    position: absolute;
+    width: 200px; 
+    height: 200px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Colorful Magic Dust Effects */
 .magic-dust-1 {
-    left: -100px;
-    top: 1px;
+    left: 40px;
+    top: 120px;
     border-color: #f44336;
     border-radius: 50%;
 }
 
 .magic-dust-2 {
-    left: -70px;
-    top: -30px;
+    left: 70px;
+    top: 90px;
     border-color: #00e676;
     transform: rotateZ(45deg);
     animation-delay: 50ms;
 }
 
 .magic-dust-3 {
-    left: -140px;
-    top: -90px;
+    left: 20px;
+    top: 60px;
     border-color: #03a9f4;
     animation-delay: 75ms;
     border-radius: 50%;
 }
 
 .magic-dust-4 {
-    left: 50px;
-    top: -110px;
+    left: 110px;
+    top: 50px;
     border-color: blue;
     animation-delay: 100ms;
     border-radius: 50%;
@@ -324,23 +344,23 @@ div[class^="magic-dust"] {
 
 .magic-dust-5 {
     left: 140px;
-    top: -90px;
+    top: 70px;
     border-color: #ffc107;
     transform: rotateZ(45deg);
     animation-delay: 125ms;
 }
 
 .magic-dust-6 {
-    left: -50px;
-    top: -150px;
+    left: 70px;
+    top: 40px;
     border-color: #d500f9;
     animation-delay: 150ms;
     border-radius: 50%;
 }
 
 .magic-dust-7 {
-    left: 80px;
-    top: -30px;
+    left: 130px;
+    top: 90px;
     border-color: #009688;
     transform: rotateZ(45deg);
     animation-delay: 175ms;
@@ -348,19 +368,11 @@ div[class^="magic-dust"] {
 }
 
 .magic-dust-8 {
-    left: 115px;
-    top: 5px;
+    left: 160px;
+    top: 120px;
     border-color: #ff9800;
     animation-delay: 200ms;
     transform: rotateZ(45deg);
-}
-
-.magic-dust-9 {
-    left: 130px;
-    top: 50px;
-    border-color: purple;
-    animation-delay: 225ms;
-    border-radius: 50%;
 }
 
 .ball-and-shadow-view {
@@ -369,6 +381,7 @@ div[class^="magic-dust"] {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%; 
 }
 
 .ball {
@@ -383,7 +396,7 @@ div[class^="magic-dust"] {
 
 .shadow {
     height: 10px;
-    width: 100px;
+    width: 100px; 
     position: absolute;
     border-radius: 100%;
     background-color: #0288d1;
@@ -401,8 +414,8 @@ div[class^="magic-dust"] {
     width: 100%;
     height: 50%;
     background: red;
-    border: 10px solid black;
-    border-bottom-width: 5px;
+    border: 8px solid black;
+    border-bottom-width: 4px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     box-sizing: border-box;
@@ -412,8 +425,8 @@ div[class^="magic-dust"] {
     height: 50%;
     width: 100%;
     background: white;
-    border: 10px solid black;
-    border-top-width: 5px;
+    border: 8px solid black;
+    border-top-width: 4px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     box-sizing: border-box;
@@ -425,7 +438,7 @@ div[class^="magic-dust"] {
     top: 55px;
     width: 25px;
     height: 25px;
-    border: 10px solid black;
+    border: 8px solid black;
     background-color: white;
     border-radius: 50%;
     transform: translateX(-50%);
@@ -436,16 +449,12 @@ div[class^="magic-dust"] {
 }
 
 /* Animations */
-
 /* Circle Animation */
 @keyframes circle {
-
-    0%,
-    100% {
+    0%, 100% {
         left: 50%;
         transform: translateX(-50%);
     }
-
     50% {
         left: 50%;
         transform: translateX(-50%) scale(1.1);
@@ -454,62 +463,256 @@ div[class^="magic-dust"] {
 
 /* Ball Bounce Animation */
 @keyframes ball {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0%);
     }
-
     25% {
-        transform: translateY(-25%);
+        transform: translateY(-20%);
     }
-
     50% {
         transform: translateY(0%);
     }
-
     75% {
-        transform: translateY(-10%);
+        transform: translateY(-8%);
     }
 }
 
 /* Shadow Animation */
 @keyframes shadow {
-
-    0%,
-    100% {
-        width: 150px;
+    0%, 100% {
+        width: 80px;
     }
-
     25% {
-        width: 75px;
+        width: 45px;
     }
-
     50% {
-        width: 150px;
+        width: 80px;
     }
-
     75% {
-        width: 100px;
+        width: 60px;
     }
 }
 
-/* Magic Dust Animation */
+/* Magic Dust Animation - Contained version */
 @keyframes magic-dust {
     0% {
         transform: translate(0, 0) scale(1);
         opacity: 1;
     }
-
     50% {
-        transform: translate(calc(80px * (random() - 0.5)),
-                calc(80px * (random() - 0.5))) scale(1.2);
+        transform: translate(
+            calc(var(--random-x, 0.5) * 40px - 20px),
+            calc(var(--random-y, 0.5) * 40px - 20px)
+        ) scale(1.2);
         opacity: 0.8;
     }
-
     100% {
-        transform: translate(calc(150px * (random() - 0.5)),
-                calc(150px * (random() - 0.5))) scale(0.8);
+        transform: translate(
+            calc(var(--random-x, 0.5) * 60px - 30px),
+            calc(var(--random-y, 0.5) * 60px - 30px)
+        ) scale(0.8);
         opacity: 0;
     }
 }
+
+/* Media queries for responsive design */
+@media screen and (max-width: 992px) {
+    .container {
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .right-section button {
+        width: 100%;
+    }
+    
+    .ball {
+        height: 110px;
+        width: 110px;
+    }
+    
+    .circle {
+        top: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    .right-section button {
+        width: 100%;
+        max-width: 95%;
+        margin-left: 15px;
+    }
+
+    .login-container, .buttons button {
+        max-width: 100%;
+    }
+
+    #niantic {
+        width: 70px;
+        height: 70px;
+    }
+
+    #pokemonix {
+        width: 45px;
+        height: 45px;
+    }
+
+    button i {
+        left: 20px;
+    }
+
+    .left-section p {
+        margin-top: 50px;
+    }
+    
+    .pokeball-container {
+        height: 40px;
+        margin-top: 60px;
+    }
+    
+    .ball {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .circle {
+        top: 35px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .shadow {
+        width: 70px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .view {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .ball-and-shadow-view {
+        height: 150px;
+    }
+
+    .ball {
+        height: 90px;
+        width: 90px;
+    }
+
+    .circle {
+        top: 30px;
+        width: 16px;
+        height: 16px;
+        border-width: 6px;
+    }
+    
+    .upper-half, .lower-half {
+        border-width: 6px;
+    }
+    
+    .upper-half {
+        border-bottom-width: 3px;
+    }
+    
+    .lower-half {
+        border-top-width: 3px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .right-section button {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+    
+    /* Tighter animation area */
+    @keyframes magic-dust {
+        0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: translate(
+                calc(var(--random-x, 0.5) * 30px - 15px),
+                calc(var(--random-y, 0.5) * 30px - 15px)
+            ) scale(1.2);
+            opacity: 0.8;
+        }
+        100% {
+            transform: translate(
+                calc(var(--random-x, 0.5) * 40px - 20px),
+                calc(var(--random-y, 0.5) * 40px - 20px)
+            ) scale(0.8);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes shadow {
+        0%, 100% {
+            width: 70px;
+        }
+        25% {
+            width: 35px;
+        }
+        50% {
+            width: 70px;
+        }
+        75% {
+            width: 50px;
+        }
+    }
+}
+
+/* Magic Dusk Animation */
+.magic-dust-1 { --random-x: 0.3; --random-y: 0.7; }
+.magic-dust-2 { --random-x: 0.7; --random-y: 0.2; }
+.magic-dust-3 { --random-x: 0.1; --random-y: 0.9; }
+.magic-dust-4 { --random-x: 0.8; --random-y: 0.4; }
+.magic-dust-5 { --random-x: 0.4; --random-y: 0.6; }
+.magic-dust-6 { --random-x: 0.2; --random-y: 0.3; }
+.magic-dust-7 { --random-x: 0.6; --random-y: 0.8; }
+.magic-dust-8 { --random-x: 0.9; --random-y: 0.1; }
