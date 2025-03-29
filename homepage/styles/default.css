@@ -209,7 +209,7 @@ label[for="nav-toggle"] {
   position: relative;
   width: 16px;
   height: 3px;
-  background: var(--background-color); 
+  background: var(--navbar-bg-color); 
   border-radius: 99px;
   transition: background 0.2s;
 }
