@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Pokemonix Web Store</title>
+    <title>Transaction History | Pokemonix Web Store</title>
     <link rel="stylesheet" href="/homepage/styles/default.css" />
     <link rel="stylesheet" href="/homepage/styles/pokemonix.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -32,7 +33,7 @@
 
       </div>
       <div id="nav-content">
-        <div class="nav-button" onclick="navigateTo('index.html')">
+        <div class="nav-button" onclick="navigateTo('homepage/index/pokemonix.html')">
           <i class="fas fa-house-chimney"></i><span>Home</span>
         </div>
 
@@ -54,6 +55,130 @@
       </div>
     </div>
     <main>
+      <div class="transaction-container">
+        <h1 class="transaction-header">Transaction History</h1>
+
+        <!-- Transaction 1 -->
+        <div class="transaction-card">
+            <div class="transaction-title">
+                <span>Pokémon GO Fest 2025: Global Ticket</span>
+                <span class="transaction-date">March 29, 2024</span>
+            </div>
+            <div class="transaction-details">
+                <div class="detail-section">
+                    <h3>PRODUCT DETAILS</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Price:</span>
+                        <span class="detail-input">₱439.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Discount Code:</span>
+                        <span class="promo-code">BANZ123 (-₱39.00)</span>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <h3>ORDER SUMMARY</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Quantity:</span>
+                        <span class="detail-input">1</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Subtotal:</span>
+                        <span class="detail-input">₱439.00</span>
+                    </div>
+                    <div class="detail-item grand-total">
+                        <span class="detail-label">Grand Total:</span>
+                        <span>₱400.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Order #:</span>
+                        <span class="detail-input">P0-20240329-000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction 2 -->
+        <div class="transaction-card">
+            <div class="transaction-title">
+                <span>Ultra Raid Box</span>
+                <span class="transaction-date">October 16, 2024</span>
+            </div>
+            <div class="transaction-details">
+                <div class="detail-section">
+                    <h3>PRODUCT DETAILS</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Price:</span>
+                        <span class="detail-input">₱149.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Discount Code:</span>
+                        <span class="promo-code">None</span>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <h3>ORDER SUMMARY</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Quantity:</span>
+                        <span class="detail-input">2</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Subtotal:</span>
+                        <span class="detail-input">₱298.00</span>
+                    </div>
+                    <div class="detail-item grand-total">
+                        <span class="detail-label">Grand Total:</span>
+                        <span>₱298.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Order #:</span>
+                        <span class="detail-input">P0-20241016-001</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction 3 -->
+        <div class="transaction-card">
+            <div class="transaction-title">
+                <span>Might and Mastery Box</span>
+                <span class="transaction-date">November 02, 2024</span>
+            </div>
+            <div class="transaction-details">
+                <div class="detail-section">
+                    <h3>Power Up Ticket Ultra Ticket Box</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Price:</span>
+                        <span class="detail-input">₱289.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Discount Code:</span>
+                        <span class="promo-code">GEL025 (-₱125.25)</span>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <h3>ORDER SUMMARY</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Quantity:</span>
+                        <span class="detail-input">1</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Subtotal:</span>
+                        <span class="detail-input">₱289.00</span>
+                    </div>
+                    <div class="detail-item grand-total">
+                        <span class="detail-label">Grand Total:</span>
+                        <span>₱163.75</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Order #:</span>
+                        <span class="detail-input">P0-2021102-002</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Footer -->
       <footer class="footer py-4">
         <div class="container">
           <div class="row">
@@ -72,6 +197,7 @@
     <div class="web-loader"></div>
     <script src="/homepage/scripts/default.js"></script>
     <script src="/homepage/scripts/pokemonix.js"></script>
+    <script src="scripts.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
