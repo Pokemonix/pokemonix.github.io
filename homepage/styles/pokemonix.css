@@ -474,3 +474,7 @@ main {
   .cart-item-count.active {
     opacity: 1;
   }
+
+  .col-md-3 {
+    cursor: pointer;
+  }

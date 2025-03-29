@@ -23,13 +23,12 @@
   </head>
   <body>
     <div id="nav-bar">
-      <input id="nav-toggle" type="checkbox" checked/>
+      <input id="nav-toggle" type="checkbox" checked />
       <div id="nav-header">
         <a id="nav-title" href="#" target="_blank"
           ><i class="fas fa-shopping-cart"></i> Pokemonix</a
         >
         <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
-
       </div>
       <div id="nav-content">
         <div class="nav-button" onclick="navigateTo('index.html')">
@@ -37,12 +36,10 @@
         </div>
 
         <div class="nav-button" onclick="navigateTo('pages/products.html')">
-          <i class="fas fa-box"></i>
+          <i class="fas fa-cart-shopping"></i>
           <span>Cart</span>
           <p class="cart-item-count"></p>
         </div>
-
-
 
         <div class="nav-button" onclick="navigateTo('pages/contact.html')">
           <i class="fas fa-comment"></i><span>Contact</span>
@@ -50,46 +47,80 @@
         <div class="nav-button" onclick="navigateTo('pages/about.html')">
           <i class="fas fa-user"></i><span>About</span>
         </div>
-
       </div>
     </div>
     <main>
       <section class="intro-greeting py-4 py-xl-5">
         <div class="container h-100">
           <!-- Bootstrap Carousel -->
-          <div id="carouselPokemonix" class="carousel slide" data-bs-ride="carousel">
+          <div
+            id="carouselPokemonix"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
             <!-- Carousel Indicators -->
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselPokemonix" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselPokemonix" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselPokemonix" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPokemonix"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPokemonix"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselPokemonix"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
             </div>
-            
+
             <!-- Carousel Content -->
             <div class="carousel-inner rounded shadow">
               <!-- Slide 1 -->
               <div class="carousel-item active">
-                <img src="media/Banner/pokemon-go-banner-1.png" class="d-block w-100" alt="New Pokemon Collection">
+                <img
+                  src="media/Banner/pokemon-go-banner-1.png"
+                  class="d-block w-100"
+                  alt="New Pokemon Collection"
+                />
                 <div class="carousel-caption d-none d-md-block">
                   <h2>Exclusive New Collection</h2>
-                  <p>Discover the latest additions to our Pokemon merchandise</p>
+                  <p>
+                    Discover the latest additions to our Pokemon merchandise
+                  </p>
                   <button class="btn btn-light">Shop Now</button>
                 </div>
               </div>
-              
+
               <!-- Slide 2 -->
               <div class="carousel-item">
-                <img src="media/Banner/pokemon-go-banner-3.png" class="d-block w-100" alt="Limited Edition Items">
+                <img
+                  src="media/Banner/pokemon-go-banner-3.png"
+                  class="d-block w-100"
+                  alt="Limited Edition Items"
+                />
                 <div class="carousel-caption d-none d-md-block">
                   <h2>Limited Edition Items</h2>
                   <p>Get them before they're gone forever!</p>
                   <button class="btn btn-light">View Collection</button>
                 </div>
               </div>
-              
+
               <!-- Slide 3 -->
               <div class="carousel-item">
-                <img src="media/Banner/pokemon-go-banner-4.png" class="d-block w-100" alt="Special Discounts">
+                <img
+                  src="media/Banner/pokemon-go-banner-4.png"
+                  class="d-block w-100"
+                  alt="Special Discounts"
+                />
                 <div class="carousel-caption d-none d-md-block">
                   <h2>Special Discounts</h2>
                   <p>Up to 30% off on selected Pokemon merchandise</p>
@@ -97,14 +128,30 @@
                 </div>
               </div>
             </div>
-            
+
             <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPokemonix" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselPokemonix"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselPokemonix" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselPokemonix"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
@@ -114,204 +161,309 @@
 
       <section class="featured-items py-5">
         <div class="container">
-          <h2 class="text-center mb-5" style="color: #333;">Quick Shop</h2>
-          
+          <h2 class="text-center mb-5" style="color: #333">Quick Shop</h2>
+
           <!-- Category Slider -->
           <div class="category-slider">
-            <button class="category-btn active" data-category="featured">Featured</button>
-            <button class="category-btn" data-category="item-boxes">Item Boxes</button>
-            <button class="category-btn" data-category="pokecoins">Pokecoins</button>
-            <button class="category-btn" data-category="daily-bundles">Daily Bundles</button>
+            <button class="category-btn active" data-category="featured">
+              Featured
+            </button>
+            <button class="category-btn" data-category="item-boxes">
+              Item Boxes
+            </button>
+            <button class="category-btn" data-category="pokecoins">
+              Pokecoins
+            </button>
+            <button class="category-btn" data-category="daily-bundles">
+              Daily Bundles
+            </button>
           </div>
-          
 
-      <!-- Featured Items Section with Modal Triggers -->
-      <div class="category-content featured-content active" id="featured">
-        <div class="row g-4">
-          <!-- Featured Item 1 -->
-          <div class="col-md-3">
-            <div class="featured-item" onclick="showModal('Pokémon GO Fest 2025: Global Ticket', 'Global access ticket for Pokémon GO Fest 2025 featuring exclusive in-game events and rewards', '$12.99', 'media/Bundles/pokemon-go-fest-bundle.png')">
-              <img src="media/Bundles/pokemon-go-fest-bundle.png" alt="Pokémon GO Fest 2025: Global Ticket">
-              <div class="featured-item-content">
-                <h5 class="featured-item-title">Pokémon GO Fest 2025: Global Ticket</h5>
-                <p class="featured-item-price">$12.99</p>
-                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
+          <!-- Featured Items Section with Modal Triggers -->
+          <div class="category-content featured-content active" id="featured">
+            <div class="row g-4">
+              <!-- Featured Item 1 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Pokémon GO Fest 2025: Global Ticket', 'Global access ticket for Pokémon GO Fest 2025 featuring exclusive in-game events and rewards', '$12.99', 'https://i.ibb.co/k690bpNr/pokemon-go-fest-bundle.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/k690bpNr/pokemon-go-fest-bundle.png"
+                    alt="Pokémon GO Fest 2025: Global Ticket"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">
+                      Pokémon GO Fest 2025: Global Ticket
+                    </h5>
+                    <p class="featured-item-price">$12.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          
-          <!-- Featured Item 2 -->
-          <div class="col-md-3">
-            <div class="featured-item" onclick="showModal('Deep Depths Ultra Ticket Box', 'Special Ultra Ticket Box with exclusive in-game content', '$1.99', 'media/bundles/deep-depths.png')">
-              <img src="media/bundles/deep-depths.png" alt="Deep Depths Ultra Ticket Box">
-              <div class="featured-item-content">
-                <h5 class="featured-item-title">Deep Depths Ultra Ticket Box</h5>
-                <p class="featured-item-price">$1.99</p>
-                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Featured Item 3 -->
-          <div class="col-md-3">
-            <div class="featured-item" onclick="showModal('Mega Absol Raid Day Ultra Ticket Box', 'Exclusive Ultra Ticket Box for Mega Absol Raid Day event', '$3.99', 'media/bundles/mega-absol-raid.png')">
-              <img src="media/bundles/mega-absol-raid.png" alt="Mega Absol Raid Day Ultra Ticket Box">
-              <div class="featured-item-content">
-                <h5 class="featured-item-title">Mega Absol Raid Day Ultra Ticket Box</h5>
-                <p class="featured-item-price">$3.99</p>
-                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Featured Item 4 -->
-          <div class="col-md-3">
-            <div class="featured-item" onclick="showModal('Go Rocket Box', 'Special box containing items related to Team Rocket encounters', '$4.99', 'media/bundles/go-rocket-box.png')">
-              <img src="media/bundles/go-rocket-box.png" alt="Go Rocket Box">
-              <div class="featured-item-content">
-                <h5 class="featured-item-title">Go Rocket Box</h5>
-                <p class="featured-item-price">$4.99</p>
-                <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-          
-<!-- Item Boxes Section -->
-<div class="category-content" id="item-boxes">
-  <div class="row g-4">
-    <!-- Item Box 1 -->
-    <div class="col-md-3">
-      <div class="featured-item" onclick="showModal('Adventure Box', 'A comprehensive box packed with essential items for your Pokemon GO adventure', '$14.99', 'media/bundles/adventure-box.png')">
-        <img src="media/bundles/adventure-box.png" alt="Adventure Box">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">Adventure Box</h5>
-          <p class="featured-item-price">$14.99</p>
-          <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Item Box 2 -->
-    <div class="col-md-3">
-      <div class="featured-item" onclick="showModal('Ultra Box', 'Premium box with high-value items for serious trainers', '$19.99', 'media/bundles/ultra-box.png')">
-        <img src="media/bundles/ultra-box.png" alt="Ultra Box">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">Ultra Box</h5>
-          <p class="featured-item-price">$19.99</p>
-          <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Item Box 3 -->
-    <div class="col-md-3">
-      <div class="featured-item" onclick="showModal('Community Day Box', 'Special box tailored for Community Day events', '$7.99', 'media/bundles/community-day-box.png')">
-        <img src="media/bundles/community-day-box.png" alt="Community Day Box">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">Community Day Box</h5>
-          <p class="featured-item-price">$7.99</p>
-          <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Item Box 4 -->
-    <div class="col-md-3">
-      <div class="featured-item" onclick="showModal('Raid Box', 'Essential items for raid battles and challenges', '$9.99', 'media/bundles/raid-box.png')">
-        <img src="media/bundles/raid-box.png" alt="Raid Box">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">Raid Box</h5>
-          <p class="featured-item-price">$9.99</p>
-          <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
 
-<!-- Pokecoins Section -->
-<div class="category-content" id="pokecoins">
-  <div class="row g-4">
-    <!-- Pokecoins 1 -->
-    <div class="col-md-4">
-      <div class="featured-item" onclick="showModal('100 Pokecoins', 'Small Pokecoin package perfect for quick purchases', '$0.99', 'media/coins/100-pokecoins.png')">
-        <img src="media/coins/100-pokecoins.png" alt="100 Pokecoins">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">100 Pokecoins</h5>
-          <p class="featured-item-price">$0.99</p>
-          <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Pokecoins 2 -->
-    <div class="col-md-4">
-      <div class="featured-item" onclick="showModal('550 Pokecoins', 'Mid-range Pokecoin package with great value', '$4.99', 'media/coins/550-pokecoins.png')">
-        <img src="media/coins/550-pokecoins.png" alt="550 Pokecoins">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">550 Pokecoins</h5>
-          <p class="featured-item-price">$4.99</p>
-          <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Pokecoins 3 -->
-    <div class="col-md-4">
-      <div class="featured-item" onclick="showModal('1200 Pokecoins', 'Large Pokecoin package for serious trainers', '$9.99', 'media/coins/1200-pokecoins.png')">
-        <img src="media/coins/1200-pokecoins.png" alt="1200 Pokecoins">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">1200 Pokecoins</h5>
-          <p class="featured-item-price">$9.99</p>
-          <button class="btn btn-sm btn-outline-dark w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Remaining Pokecoins (4-6) can follow the same pattern -->
-    <!-- ... (previous code for remaining coin packages) ... -->
-  </div>
-</div>
+              <!-- Featured Item 2 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Deep Depths Ultra Ticket Box', 'Special Ultra Ticket Box with exclusive in-game content', '$1.99', 'https://i.ibb.co/gbWcjjHk/deep-depths.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/gbWcjjHk/deep-depths.png"
+                    alt="Deep Depths Ultra Ticket Box"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">
+                      Deep Depths Ultra Ticket Box
+                    </h5>
+                    <p class="featured-item-price">$1.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-<!-- Daily Bundles Section -->
-<div class="category-content" id="daily-bundles">
-  <div class="row g-4">
-    <!-- Daily Bundle - Wide Card -->
-    <div class="col-md-6 mx-auto">
-      <div class="featured-item daily-bundle" onclick="showModal('Mega Evolution Bundle', 'Limited Time Offer with Mega Evolution Event Items', '$14.99', 'media/bundles/daily-special.png')">
-        <div class="daily-bundle-header">
-          <span class="badge bg-danger">TODAY ONLY</span>
-          <h4>Daily Special Bundle</h4>
-        </div>
-        <img src="media/bundles/daily-special.png" alt="Daily Special Bundle">
-        <div class="featured-item-content">
-          <h5 class="featured-item-title">Limited Time Offer: Mega Evolution Bundle</h5>
-          <div class="bundle-contents">
-            <ul>
-              <li>5 Premium Raid Passes</li>
-              <li>3 Super Incubators</li>
-              <li>3 Lucky Eggs</li>
-              <li>3 Star Pieces</li>
-            </ul>
+              <!-- Featured Item 3 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Mega Absol Raid Day Ultra Ticket Box', 'Exclusive Ultra Ticket Box for Mega Absol Raid Day event', '$3.99', 'https://i.ibb.co/B28cmLhp/mega-absol-raid.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/B28cmLhp/mega-absol-raid.png"
+                    alt="Mega Absol Raid Day Ultra Ticket Box"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">
+                      Mega Absol Raid Day Ultra Ticket Box
+                    </h5>
+                    <p class="featured-item-price">$3.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Featured Item 4 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Go Rocket Box', 'Special box containing items related to Team Rocket encounters', '$4.99', 'https://i.ibb.co/39xSf8J3/go-rocket-box.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/39xSf8J3/go-rocket-box.png"
+                    alt="Go Rocket Box"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">Go Rocket Box</h5>
+                    <p class="featured-item-price">$4.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="price-section">
-            <p class="original-price">$24.99</p>
-            <p class="featured-item-price">$14.99</p>
-            <p class="discount-tag">SAVE 40%</p>
+
+          <!-- Item Boxes Section -->
+          <div class="category-content" id="item-boxes">
+            <div class="row g-4">
+              <!-- Item Box 1 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Might and Master Box', 'A comprehensive box packed with essential items for your Pokemon GO adventure', '$14.99', 'https://i.ibb.co/99Zg0ZRh/Might-and-Mastery-Box.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/99Zg0ZRh/Might-and-Mastery-Box.png"
+                    alt="Might and Master Box"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">Might and Master Box</h5>
+                    <p class="featured-item-price">$14.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item Box 2 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Ultra Raid Box', 'Premium box with high-value items for serious trainers', '$19.99', 'https://i.ibb.co/8LFbMzmN/Ultra-Raid-Box.png')"
+                >
+                  <img src="https://i.ibb.co/8LFbMzmN/Ultra-Raid-Box.png" alt="Ultra Raid Box" />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">Ultra Raid Box</h5>
+                    <p class="featured-item-price">$19.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item Box 3 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Super Incubator', 'Special box tailored for Community Day events', '$7.99', 'https://i.ibb.co/1fzMwD3n/Super-Incubator.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/1fzMwD3n/Super-Incubator.png"
+                    alt="Super Incubator"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">Super Incubator</h5>
+                    <p class="featured-item-price">$7.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item Box 4 -->
+              <div class="col-md-3">
+                <div
+                  class="featured-item"
+                  onclick="showModal('Egg Incubator', 'Essential items for raid battles and challenges', '$3.99', 'https://i.ibb.co/1YdK2zHq/Egg-Incubator.png')"
+                >
+                  <img src="https://i.ibb.co/1YdK2zHq/Egg-Incubator.png" alt="Egg Incubator" />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">Egg Incubator</h5>
+                    <p class="featured-item-price">$3.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="timer-section">
-            <p class="countdown">Ends in: <span id="countdown-timer">23:59:59</span></p>
+
+          <!-- Pokecoins Section -->
+          <div class="category-content" id="pokecoins">
+            <div class="row g-4">
+              <!-- Pokecoins 1 -->
+              <div class="col-md-4">
+                <div
+                  class="featured-item"
+                  onclick="showModal('110 Pokecoins', 'Small Pokecoin package perfect for quick purchases', '$0.99', 'https://i.ibb.co/ksFSNWBL/110-Coins.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/ksFSNWBL/110-Coins.png"
+                    alt="110 Pokecoins"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">110 Pokecoins</h5>
+                    <p class="featured-item-price">$0.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pokecoins 2 -->
+              <div class="col-md-4">
+                <div
+                  class="featured-item"
+                  onclick="showModal('600 Pokecoins', 'Mid-range Pokecoin package with great value', '$4.99', 'https://i.ibb.co/Nnkmr03t/600-Coins.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/Nnkmr03t/600-Coins.png"
+                    alt="600 Pokecoins"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">600 Pokecoins</h5>
+                    <p class="featured-item-price">$4.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pokecoins 3 -->
+              <div class="col-md-4">
+                <div
+                  class="featured-item"
+                  onclick="showModal('1300 Pokecoins', 'Large Pokecoin package for serious trainers', '$8.99', 'https://i.ibb.co/Y7kWfWWC/1-300-Coins.png')"
+                >
+                  <img
+                    src="https://i.ibb.co/Y7kWfWWC/1-300-Coins.png"
+                    alt="1300 Pokecoins"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">1300 Pokecoins</h5>
+                    <p class="featured-item-price">$8.99</p>
+                    <button class="btn btn-sm btn-outline-dark w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Remaining Pokecoins (4-6) can follow the same pattern -->
+              <!-- ... (previous code for remaining coin packages) ... -->
+            </div>
           </div>
-          <button class="btn btn-danger w-100 mt-2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-        
+
+          <!-- Daily Bundles Section -->
+          <div class="category-content" id="daily-bundles">
+            <div class="row g-4">
+              <!-- Daily Bundle - Wide Card -->
+              <div class="col-md-6 mx-auto">
+                <div
+                  class="featured-item daily-bundle"
+                  onclick="showModal('Ultra Community Day Box', 'Limited Time Offer with Ultra Community Day Box', '$10.99', 'https://i.ibb.co/zhCB699C/Ultra-Community-Day-Box.png')"
+                >
+                  <div class="daily-bundle-header">
+                    <span class="badge bg-danger">TODAY ONLY</span>
+                    <h4>Daily Special Bundle</h4>
+                  </div>
+                  <img
+                    src="https://i.ibb.co/zhCB699C/Ultra-Community-Day-Box.png"
+                    alt="Daily Special Bundle"
+                  />
+                  <div class="featured-item-content">
+                    <h5 class="featured-item-title">
+                      Limited Time Offer: Ultra Community Day Box
+                    </h5>
+                    <div class="bundle-contents">
+                      <ul>
+                        <li>5 Premium Raid Passes</li>
+                        <li>3 Super Incubators</li>
+                        <li>3 Lucky Eggs</li>
+                        <li>3 Star Pieces</li>
+                      </ul>
+                    </div>
+                    <div class="price-section">
+                      <p class="original-price">$24.99</p>
+                      <p class="featured-item-price">$14.99</p>
+                      <p class="discount-tag">SAVE 40%</p>
+                    </div>
+                    <div class="timer-section">
+                      <p class="countdown">
+                        Ends in: <span id="countdown-timer">20:59:59</span>
+                      </p>
+                    </div>
+                    <button class="btn btn-danger w-100 mt-2">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -320,42 +472,83 @@
           <div class="row h-100 align-items-center">
             <div class="col-md-6 d-flex justify-content-center flex-column">
               <h2 class="fw-bold mb-3">Pokemon Collections</h2>
-              <p>Explore our extensive collections of Pokemon merchandise, from clothing and accessories to toys and collectibles. Each item is carefully selected to bring joy to trainers of all ages. Our products are official and of the highest quality, ensuring your Pokemon journey is equipped with the best gear.</p>
-              <a href="pages/collections.html" class="btn btn-outline-light mt-3">Explore Collections</a>
+              <p>
+                Explore our extensive collections of Pokemon merchandise, from
+                clothing and accessories to toys and collectibles. Each item is
+                carefully selected to bring joy to trainers of all ages. Our
+                products are official and of the highest quality, ensuring your
+                Pokemon journey is equipped with the best gear.
+              </p>
+              <a
+                href="pages/collections.html"
+                class="btn btn-outline-light mt-3"
+                >Explore Collections</a
+              >
             </div>
             <div class="col-md-6 d-flex justify-content-center">
-              <div class="rounded" style="width: 100%; max-width: 300px; height: 300px; overflow: hidden;">
-                <img src="media/Bundles/Might and Mastery Box.png" alt="Pokemon Collections" style="width: 100%; height: 100%; object-fit: cover;">
+              <div
+                class="rounded"
+                style="
+                  width: 100%;
+                  max-width: 300px;
+                  height: 300px;
+                  overflow: hidden;
+                "
+              >
+                <img
+                  src="media/Bundles/Might and Mastery Box.png"
+                  alt="Pokemon Collections"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
       <section class="body-contact py-4 py-xl-5">
         <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
-                    <div>
-                        <h2 class="text-uppercase fw-bold mb-3">JOIN THE<br />POKEMON COMMUNITY</h2>
-                        <p class="mb-4">Subscribe to our newsletter to receive exclusive offers, early access to new products, and special event invitations. Join thousands of trainers worldwide!</p>
-                        <div class="input-group mb-3">
-                          <input type="email" class="form-control" placeholder="Your email address" aria-label="Email address">
-                          <button class="btn btn-primary" type="button">Subscribe</button>
-                        </div>
-                    </div>
+          <div class="row h-100">
+            <div
+              class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center"
+            >
+              <div>
+                <h2 class="text-uppercase fw-bold mb-3">
+                  JOIN THE<br />POKEMON COMMUNITY
+                </h2>
+                <p class="mb-4">
+                  Subscribe to our newsletter to receive exclusive offers, early
+                  access to new products, and special event invitations. Join
+                  thousands of trainers worldwide!
+                </p>
+                <div class="input-group mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your email address"
+                    aria-label="Email address"
+                  />
+                  <button class="btn btn-primary" type="button">
+                    Subscribe
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
       </section>
       <footer class="footer py-4">
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
-              <p class="copyright-disclaimer">© 2025 Pokemonix Web Store. The images used are the property of Niantic. This project is for educational purposes only and no copyright infringement is intended.</p>
+              <p class="copyright-disclaimer">
+                © 2025 Pokemonix Web Store. The images used are the property of
+                Niantic. This project is for educational purposes only and no
+                copyright infringement is intended.
+              </p>
               <div class="footer-links mt-2">
-                <a href="pages/privacy.html">Privacy Policy</a> | 
-                <a href="pages/terms.html">Terms of Service</a> | 
+                <a href="pages/privacy.html">Privacy Policy</a> |
+                <a href="pages/terms.html">Terms of Service</a> |
                 <a href="pages/contact.html">Contact Us</a>
               </div>
             </div>
