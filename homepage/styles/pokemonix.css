@@ -672,15 +672,11 @@ main {
 }
 
 /* Pokemon-themed Carousel Indicators */
-.carousel-indicators {
-  bottom: 20px;
-}
-
 .carousel-indicators button {
-  width: 12px;
-  height: 12px;
+  width: 50px;
+  height: 50px;
   background-color: #fff;
-  border-radius: 50%;
+
   border: 2px solid #3466AF !important;
   opacity: 0.8;
   margin: 0 5px;
@@ -688,12 +684,12 @@ main {
 }
 
 .carousel-indicators button.active {
-  width: 12px;
-  height: 12px;
+  width: 30px;
+  height: 4px;
   background-color: #ff3e3e;
-  transform: scale(1.2);
   border: 2px solid #fff !important;
   opacity: 1;
+
 }
 
 /* Pokemon-styled Shop Now buttons */
@@ -780,12 +776,7 @@ main {
 /* Carousel Responsiveness */
 /* Responsive adjustments for Pokemon UI */
 @media (max-width: 992px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
-  }
+
   
   .carousel-caption h2::before {
     width: 16px;
@@ -798,12 +789,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-  }
+
   
   .carousel-control-prev-icon::before,
   .carousel-control-next-icon::before {
