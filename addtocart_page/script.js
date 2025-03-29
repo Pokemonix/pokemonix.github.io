@@ -2,6 +2,11 @@ const productContainer = document.querySelector(".product-list");
 const isProductDetailPage = document.querySelector(".product-detail");
 const isCartPage = document.querySelector(".cart");
 
+if (isProductDetailPage !== null) {
+  displayProductDetail();
+} else if (isCartPage !== null) {
+  displayCart();
+}
 
 if (productContainer) {
     displayProducts();
@@ -137,14 +142,14 @@ function displayCart() {
   
     if (cart.length === 0) {
       cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
-      subtotalEl.textContent = "$0";
-      grandTotalEl.textContent = "$0";
+      subtotalEl.textContent = "₱0";
+      grandTotalEl.textContent = "₱0";
       return;
     }
     let subtotal = 0;
 
     cart.forEach((item, index) => {
-        const itemTotal = parseFloat(item.price.replace("$", "")) * item.quantity;
+        const itemTotal = parseFloat(item.price.replace("₱", "")) * item.quantity;
         subtotal += itemTotal;
         
         const cartItem = document.createElement("div");
@@ -157,14 +162,14 @@ function displayCart() {
                 </div>
             </div>
             <span class="price">${item.price}</span>
-            <div class="quantity"><input type="number" value="${item.quantity}" min="1" data-index="${index}"></div>
-            <span class="total-price">${itemTotal}</span>
+            <input type="number" value="${item.quantity}" min="1" data-index="${index}">
+            <span class="total-price">₱${itemTotal.toFixed(2)}</span>
             <button class="remove" data-index="${index}"><i class="bi bi-trash"></i></button>
         `;
         cartItemsContainer.appendChild(cartItem);
     });
-    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-    grandTotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    subtotalEl.textContent = `₱${subtotal.toFixed(2)}`;
+    grandTotalEl.textContent = `₱${subtotal.toFixed(2)}`;
 
     removeCartItem();
     updateCartQuantity();
@@ -186,15 +191,21 @@ function removeCartItem() {
   function updateCartQuantity() {
     document.querySelectorAll(".quantity input").forEach(input => {
       input.addEventListener("change", function() {
-        let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-        const index = this.getAttribute("data-index");
-        cart[index].quantity = parseInt(this.value);
-        sessionStorage.setItem("cart", JSON.stringify(cart));
-        displayCart();
-        updateCartBadge();
+          let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+          const index = this.getAttribute("data-index");
+          const newQuantity = parseInt(this.value);
+  
+          if (!isNaN(newQuantity) && newQuantity > 0) {
+              cart[index].quantity = newQuantity;
+          } else {
+              this.value = cart[index].quantity;
+          }
+  
+          sessionStorage.setItem("cart", JSON.stringify(cart));
+          displayCart();
+          updateCartBadge();
       });
-    });
-  }
+  });
 
   function updateCartBadge() {
     const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
@@ -212,4 +223,3 @@ function removeCartItem() {
   }
 
 updateCartBadge();
-
