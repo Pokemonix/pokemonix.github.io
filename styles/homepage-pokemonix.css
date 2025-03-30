@@ -482,7 +482,7 @@ main {
 .pokemon-go-download-banner {
   color: #1f1f1f;
   margin: 20px 0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px #00000026;
   position: relative;
   border-radius: 12px;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -589,7 +589,7 @@ main {
 .download-card-image {
   width: 100%;
   max-width: 300px;
-  height: 400px;
+  height: 450px;
   position: relative;
   border-radius: 12px;
   box-shadow: 0 5px 20px #1c2c5f;
