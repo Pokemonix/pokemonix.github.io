@@ -1,112 +1,188 @@
-/* google fonts  */
+/* transaction-style.css */
+/* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 * {
     font-family: "Afacad Flux", serif;
+    box-sizing: border-box;
 }
 
-.transaction-container {
-    max-width: 1400px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.transaction-header {
-    color: #ef233c;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 32px;
-}
-
-.transaction-card {
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background-color: white;
-    border-radius: 8px;
-    padding: 30px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #ffcb05;
+    padding: 15px;
+    background-color: #3466af;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
 }
 
-.transaction-title {
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coin-img{
+    height: 20px; 
+    vertical-align: middle;
+}
+
+.logo-img{
+    height: 90px;
+}
+
+
+.sign-out-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.sign-out-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.order-history-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.order-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.order-history-header h1 {
     color: #3466af;
-    font-weight: bold;
-    font-size: 19.2px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
+    font-size: 1.75rem;
+    margin: 0;
 }
 
-.transaction-date {
-    color: #ccc;
-    font-weight: 500;
-    font-size: 14.4px;
+.order-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
-.transaction-details {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 80px;
+.order-history-table th {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #3466af;
+    border-bottom: 2px solid #e9ecef;
 }
 
-.detail-section h3 {
-    color: #ef233c;
-    font-size: 16px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+.order-history-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    color: #333;
 }
 
-.detail-item {
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.detail-label {
-    color: #3761a8;
-}
-
-.detail-input {
-    color: #ccc;
-    font-style: italic;
-}
-
-.promo-code {
+.order-history-table .status-input {
     color: #28a745;
-    font-style: italic;
+    font-weight: 500;
 }
 
-.grand-total {
-    font-weight: bold;
-    color: #ef233c;
-    font-size: 16px;
+.order-history-table tr:last-child td {
+    border-bottom: none;
 }
 
-.no-transactions {
-    text-align: center;
-    padding: 40px;
-    color: #ccc;
-}
-
-/* Responsiveness*/
+/* Responsive Design */
 @media (max-width: 768px) {
-    .transaction-details {
-        grid-template-columns: 1fr;
+    .user-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
     }
     
-    .transaction-container {
-        margin: 10px;
+    .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .user-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .sign-out-btn {
+        align-self: flex-end;
+    }
+    
+    .order-history-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .order-history-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .order-history-table th,
+    .order-history-table td {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
         padding: 15px;
     }
     
-    .transaction-title {
-        flex-direction: column;
+    .order-history-container {
+        padding: 10px;
     }
     
-    .transaction-date {
-        margin-top: 5px;
+    .order-history-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .order-history-table th,
+    .order-history-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
     }
 }
