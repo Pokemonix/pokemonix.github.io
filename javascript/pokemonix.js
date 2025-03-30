@@ -206,7 +206,7 @@ function showModal(name, description, price, imageSrc) {
   descriptionElement.textContent = description;
   
   const addToCartBtn = document.createElement('button');
-  addToCartBtn.classList.add('btn', 'btn-primary', 'w-100', 'mt-3');
+  addToCartBtn.classList.add( 'add-to-cart-btn', 'w-100', 'mt-3');
   addToCartBtn.textContent = 'Add to Cart';
   addToCartBtn.onclick = () => {
     addToCart({name, description, price, imageSrc});

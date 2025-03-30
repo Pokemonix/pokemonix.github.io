@@ -213,7 +213,7 @@ main {
 /* Pokemon-styled Shop Now buttons */
 .carousel-caption .btn {
   background: linear-gradient(135deg, #3466af, #2a559c);
-  color: white;
+
   border: none;
   border-radius: 30px;
   padding: 8px 20px;
@@ -482,10 +482,8 @@ main {
 .pokemon-go-download-banner {
   color: #1f1f1f;
   margin: 20px 0;
-  box-shadow: 0 8px 24px #00000026;
   position: relative;
   border-radius: 12px;
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
 .pokemon-go-download-banner h2 {
@@ -641,6 +639,7 @@ main {
   padding: 0;
   max-width: 500px;
   width: 90%;
+  position: relative;
 }
 
 .product-modal-header {
@@ -652,13 +651,14 @@ main {
 
 .product-modal-close {
   position: absolute;
-  right: 15px;
+  right: 20px;
   top: 15px;
-  color: #666;
+  color: #5c5c5c;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s ease;
+  z-index: 1;
 }
 
 .product-modal-close:hover {
@@ -716,9 +716,11 @@ main {
 }
 
 .add-to-cart-btn {
-  background-color: #3466af;
+  background-color: #1c2c5f;
   color: white;
   border: none;
+  border-radius: 6px;
+  padding: 8px;
 }
 
 .add-to-cart-btn:hover {
@@ -726,7 +728,7 @@ main {
 }
 
 .continue-shopping-btn {
-  background-color: white;
+  background-color: #1c2c5f;
   color: #333;
   border: 1px solid #ddd;
 }
