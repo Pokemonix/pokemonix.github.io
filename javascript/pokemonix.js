@@ -207,7 +207,7 @@ function showModal(name, description, price, imageSrc) {
   
   const addToCartBtn = document.createElement('button');
   addToCartBtn.classList.add( 'add-to-cart-btn', 'w-100', 'mt-3');
-  addToCartBtn.textContent = 'Add to Cart';
+  addToCartBtn.textContent = 'Comfirm Checkout';
   addToCartBtn.onclick = () => {
     addToCart({name, description, price, imageSrc});
     document.body.removeChild(modal);
