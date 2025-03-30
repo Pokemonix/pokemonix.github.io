@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/homepage/styles/default.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <script
-    src="https://kit.fontawesome.com/e9625646b7.js"crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="/styles/addtocart-style.css">
+  <link rel="stylesheet" href="/styles/homepage-default.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/e9625646b7.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
- <!--NAVBAR-->
+  <!--NAVBAR-->
   <div id="nav-bar">
-    <input id="nav-toggle" type="checkbox" checked/>
+    <input id="nav-toggle" type="checkbox" checked />
     <div id="nav-header">
-      <a id="nav-title" href="#" target="_blank"
-        ><i class="fas fa-shopping-cart"></i> Pokemonix</a
-      >
+      <a id="nav-title" href="#" target="_blank"><i class="fas fa-shopping-cart"></i> Pokemonix</a>
       <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
 
     </div>
     <div id="nav-content">
-      <div class="nav-button" onclick="navigateTo('index.html')">
+      <div class="nav-button" onclick="navigateTo('/pages/homepage.html')">
         <i class="fas fa-house-chimney"></i><span>Home</span>
       </div>
 
-      <div class="nav-button" onclick="navigateTo('pages/products.html')">
-        
+      <div class="nav-button" onclick="navigateTo('/pages/cart.html')">
+
         <i class="fas fa-box"></i><span>Cart</span>
         <span class="cart-item-count"></span>
       </div>
@@ -44,87 +43,113 @@
     </div>
   </div>
 
- <!--CART DETAILS-->
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <!--CART DETAILS-->
     <div class="cart">
-      <div class="order-text"><i class="bi bi-cart"></i><p>ORDER DETAILS</p></div>
-        <div class="cart-header">
-          <span>PRODUCT</span>
-          <span>PRICE</span>
-          <span>QUANTITY</span>
-          <span>TOTAL</span>
-          <span></span>
-        </div>
-
-        <div class="cart-items">
-        </div>
-
-        <div class="row-container">
-          
-            <div class="promo-code">
-                <input type="text" placeholder="Promo Code">
-                <button>APPLY CODE</button>
-            </div>
-              
-            <div class="cart-summary">
-              <h3>ORDER  SUMMARY</h3>
-              <div class="cart-total">
-                  <p>Subtotal <span class="subtotal">₱0</span></p>
-                  <p>Grand Total <span class="grand-total">₱0</span></p> 
-                  <button class="checkout-btn">CHECKOUT</button>
-              </div>
-          </div>
+      <div class="order-text"><i class="bi bi-cart"></i>
+        <p>ORDER DETAILS</p>
+      </div>
+      <div class="cart-header">
+        <span>PRODUCT</span>
+        <span>PRICE</span>
+        <span>QUANTITY</span>
+        <span>TOTAL</span>
+        <span></span>
       </div>
 
-       <!--PAYMENT METHOD-->
-       <section class="payment-section">
-        <div class="payment-container">
-            <div class="payment-right">
-                <form action="" class="payment-form">
-                    <h1 class="payment-title">Payment Details</h1>
-                    <div class="payment-method">
-                        <input type="radio" name="payment-method" id="method-1" checked>
-                        <label for="method-1" class="payment-method-item">
-                            <img src="images/visa.png" alt="">
-                        </label>
-                        <input type="radio" name="payment-method" id="method-2">
-                        <label for="method-2" class="payment-method-item">
-                            <img src="images/mastercard.png" alt="">
-                        </label>
-                        <input type="radio" name="payment-method" id="method-3">
-                        <label for="method-3" class="payment-method-item">
-                            <img src="images/paypal.png" alt="">
-                        </label>
-                        <input type="radio" name="payment-method" id="method-4">
-                        <label for="method-4" class="payment-method-item">
-                            <img src="images/stripe.png" alt="">
-                        </label>
-                    </div>
-                    <div class="payment-form-group">
-                        <input type="email" placeholder=" " class="payment-form-control" id="email">
-                        <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
-                    </div>
-                    <div class="payment-form-group">
-                        <input type="text" placeholder=" " class="payment-form-control" id="card-number">
-                        <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
-                    </div>
-                    <div class="payment-form-group-flex">
-                        <div class="payment-form-group">
-                            <input type="date" placeholder=" " class="payment-form-control" id="expiry-date">
-                            <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
-                        </div>
-                        <div class="payment-form-group">
-                            <input type="text" placeholder=" " class="payment-form-control" id="cvv">
-                            <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
-                        </div>
-                    </div>
-                    <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
-                </form>
-                </div>
-            </div>
+      <div class="cart-items"></div>
+
+      <div class="row-container">
+        <div class="promo-code">
+          <input type="text" placeholder="Promo Code">
+          <button>APPLY CODE</button>
         </div>
-    </section>
-   
-    <script src="script.js"></script>
-    <script src="checkout.js"></script>
+
+        <div class="cart-summary">
+          <h3>ORDER SUMMARY</h3>
+          <div class="cart-total">
+            <p>Subtotal <span class="subtotal">₱0</span></p>
+            <p>Grand Total <span class="grand-total">₱0</span></p>
+            <button class="checkout-btn" id="proceed-to-payment">CHECKOUT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--PAYMENT METHOD-->
+  <section class="payment-section">
+    <div class="payment-container">
+      <div class="payment-right">
+        <form action="" class="payment-form">
+          <h1 class="payment-title">Payment Details</h1>
+          <div class="payment-method">
+            <input type="radio" name="payment-method" id="method-1" checked>
+            <label for="method-1" class="payment-method-item">
+              <img src="/assets/cart-images/visa.png" alt="">
+            </label>
+            <input type="radio" name="payment-method" id="method-2">
+            <label for="method-2" class="payment-method-item">
+              <img src="/assets/cart-images/mastercard.png" alt="">
+            </label>
+            <input type="radio" name="payment-method" id="method-3">
+            <label for="method-3" class="payment-method-item">
+              <img src="/assets/cart-images/paypal.png" alt="">
+            </label>
+            <input type="radio" name="payment-method" id="method-4">
+            <label for="method-4" class="payment-method-item">
+              <img src="/assets/cart-images/stripe.png" alt="">
+            </label>
+          </div>
+          <div class="payment-form-group">
+            <input type="email" placeholder=" " class="payment-form-control" id="email">
+            <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+          </div>
+          <div class="payment-form-group">
+            <input type="text" placeholder=" " class="payment-form-control" id="card-number">
+            <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
+          </div>
+          <div class="payment-form-group-flex">
+            <div class="payment-form-group">
+              <input type="date" placeholder=" " class="payment-form-control" id="expiry-date">
+              <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
+            </div>
+            <div class="payment-form-group">
+              <input type="text" placeholder=" " class="payment-form-control" id="cvv">
+              <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+            </div>
+          </div>
+          <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
+          <button type="button" id="close-payment" class="payment-form-close-button">Cancel</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script src="/javascript/default.js"></script>
+  <script src="/javascript/checkout.js"></script>
+
+  <script>
+    const mainContent = document.querySelector(".main-content");
+    const paymentSection = document.querySelector(".payment-section");
+    const proceedToPaymentBtn = document.getElementById("proceed-to-payment");
+    const closePaymentBtn = document.getElementById("close-payment");
+
+    function showPayment() {
+      paymentSection.style.display = "block";
+      mainContent.classList.add("dimmed");
+    }
+
+    function hidePayment() {
+      paymentSection.style.display = "none";
+      mainContent.classList.remove("dimmed");
+    }
+
+    proceedToPaymentBtn.addEventListener("click", showPayment);
+    closePaymentBtn.addEventListener("click", hidePayment);
+  </script>
 </body>
+
 </html>
