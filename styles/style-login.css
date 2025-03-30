@@ -1,9 +1,27 @@
-/* Import Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Scrollbar */
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0.35rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #2c2c2c;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #f5f6fa; 
+}
 
 /* Base Styles */
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Afacad Flux", serif;
     background-color: #f0f8ff;
     text-align: center;
     margin: 0;
@@ -160,7 +178,8 @@ input {
     width: 90%;
     padding: 15px;
     margin: 12px 0;
-    border: 2px solid #21386e;;
+    border: 2px solid #21386e;
+    ;
     border-radius: 10px;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
@@ -282,8 +301,8 @@ a:hover {
 
 .view {
     position: relative;
-    width: 900px; 
-    height: 200px; 
+    width: 900px;
+    height: 200px;
     margin: 0 auto;
 }
 
@@ -303,7 +322,7 @@ div[class^="magic-dust"] {
 
 .sparks-container {
     position: absolute;
-    width: 200px; 
+    width: 200px;
     height: 200px;
     top: 0;
     left: 50%;
@@ -381,7 +400,7 @@ div[class^="magic-dust"] {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
 .ball {
@@ -396,7 +415,7 @@ div[class^="magic-dust"] {
 
 .shadow {
     height: 10px;
-    width: 100px; 
+    width: 100px;
     position: absolute;
     border-radius: 100%;
     background-color: #0288d1;
@@ -451,10 +470,13 @@ div[class^="magic-dust"] {
 /* Animations */
 /* Circle Animation */
 @keyframes circle {
-    0%, 100% {
+
+    0%,
+    100% {
         left: 50%;
         transform: translateX(-50%);
     }
+
     50% {
         left: 50%;
         transform: translateX(-50%) scale(1.1);
@@ -463,15 +485,20 @@ div[class^="magic-dust"] {
 
 /* Ball Bounce Animation */
 @keyframes ball {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0%);
     }
+
     25% {
         transform: translateY(-20%);
     }
+
     50% {
         transform: translateY(0%);
     }
+
     75% {
         transform: translateY(-8%);
     }
@@ -479,15 +506,20 @@ div[class^="magic-dust"] {
 
 /* Shadow Animation */
 @keyframes shadow {
-    0%, 100% {
+
+    0%,
+    100% {
         width: 80px;
     }
+
     25% {
         width: 45px;
     }
+
     50% {
         width: 80px;
     }
+
     75% {
         width: 60px;
     }
@@ -499,18 +531,16 @@ div[class^="magic-dust"] {
         transform: translate(0, 0) scale(1);
         opacity: 1;
     }
+
     50% {
-        transform: translate(
-            calc(var(--random-x, 0.5) * 40px - 20px),
-            calc(var(--random-y, 0.5) * 40px - 20px)
-        ) scale(1.2);
+        transform: translate(calc(var(--random-x, 0.5) * 40px - 20px),
+                calc(var(--random-y, 0.5) * 40px - 20px)) scale(1.2);
         opacity: 0.8;
     }
+
     100% {
-        transform: translate(
-            calc(var(--random-x, 0.5) * 60px - 30px),
-            calc(var(--random-y, 0.5) * 60px - 30px)
-        ) scale(0.8);
+        transform: translate(calc(var(--random-x, 0.5) * 60px - 30px),
+                calc(var(--random-y, 0.5) * 60px - 30px)) scale(0.8);
         opacity: 0;
     }
 }
@@ -533,12 +563,12 @@ div[class^="magic-dust"] {
     .right-section button {
         width: 100%;
     }
-    
+
     .ball {
         height: 110px;
         width: 110px;
     }
-    
+
     .circle {
         top: 40px;
     }
@@ -550,7 +580,8 @@ div[class^="magic-dust"] {
         gap: 40px;
     }
 
-    .left-section, .right-section {
+    .left-section,
+    .right-section {
         width: 100%;
     }
 
@@ -560,7 +591,8 @@ div[class^="magic-dust"] {
         margin-left: 15px;
     }
 
-    .login-container, .buttons button {
+    .login-container,
+    .buttons button {
         max-width: 100%;
     }
 
@@ -581,23 +613,23 @@ div[class^="magic-dust"] {
     .left-section p {
         margin-top: 50px;
     }
-    
+
     .pokeball-container {
         height: 40px;
         margin-top: 60px;
     }
-    
+
     .ball {
         height: 100px;
         width: 100px;
     }
-    
+
     .circle {
         top: 35px;
         width: 18px;
         height: 18px;
     }
-    
+
     .shadow {
         width: 70px;
         margin-bottom: 20px;
@@ -613,7 +645,7 @@ div[class^="magic-dust"] {
         width: 180px;
         height: 180px;
     }
-    
+
     .ball-and-shadow-view {
         height: 150px;
     }
@@ -629,15 +661,16 @@ div[class^="magic-dust"] {
         height: 16px;
         border-width: 6px;
     }
-    
-    .upper-half, .lower-half {
+
+    .upper-half,
+    .lower-half {
         border-width: 6px;
     }
-    
+
     .upper-half {
         border-bottom-width: 3px;
     }
-    
+
     .lower-half {
         border-top-width: 3px;
     }
@@ -668,39 +701,42 @@ div[class^="magic-dust"] {
         max-width: 100%;
         margin-left: 0;
     }
-    
+
     /* Tighter animation area */
     @keyframes magic-dust {
         0% {
             transform: translate(0, 0) scale(1);
             opacity: 1;
         }
+
         50% {
-            transform: translate(
-                calc(var(--random-x, 0.5) * 30px - 15px),
-                calc(var(--random-y, 0.5) * 30px - 15px)
-            ) scale(1.2);
+            transform: translate(calc(var(--random-x, 0.5) * 30px - 15px),
+                    calc(var(--random-y, 0.5) * 30px - 15px)) scale(1.2);
             opacity: 0.8;
         }
+
         100% {
-            transform: translate(
-                calc(var(--random-x, 0.5) * 40px - 20px),
-                calc(var(--random-y, 0.5) * 40px - 20px)
-            ) scale(0.8);
+            transform: translate(calc(var(--random-x, 0.5) * 40px - 20px),
+                    calc(var(--random-y, 0.5) * 40px - 20px)) scale(0.8);
             opacity: 0;
         }
     }
-    
+
     @keyframes shadow {
-        0%, 100% {
+
+        0%,
+        100% {
             width: 70px;
         }
+
         25% {
             width: 35px;
         }
+
         50% {
             width: 70px;
         }
+
         75% {
             width: 50px;
         }
@@ -708,11 +744,42 @@ div[class^="magic-dust"] {
 }
 
 /* Magic Dusk Animation */
-.magic-dust-1 { --random-x: 0.3; --random-y: 0.7; }
-.magic-dust-2 { --random-x: 0.7; --random-y: 0.2; }
-.magic-dust-3 { --random-x: 0.1; --random-y: 0.9; }
-.magic-dust-4 { --random-x: 0.8; --random-y: 0.4; }
-.magic-dust-5 { --random-x: 0.4; --random-y: 0.6; }
-.magic-dust-6 { --random-x: 0.2; --random-y: 0.3; }
-.magic-dust-7 { --random-x: 0.6; --random-y: 0.8; }
-.magic-dust-8 { --random-x: 0.9; --random-y: 0.1; }
+.magic-dust-1 {
+    --random-x: 0.3;
+    --random-y: 0.7;
+}
+
+.magic-dust-2 {
+    --random-x: 0.7;
+    --random-y: 0.2;
+}
+
+.magic-dust-3 {
+    --random-x: 0.1;
+    --random-y: 0.9;
+}
+
+.magic-dust-4 {
+    --random-x: 0.8;
+    --random-y: 0.4;
+}
+
+.magic-dust-5 {
+    --random-x: 0.4;
+    --random-y: 0.6;
+}
+
+.magic-dust-6 {
+    --random-x: 0.2;
+    --random-y: 0.3;
+}
+
+.magic-dust-7 {
+    --random-x: 0.6;
+    --random-y: 0.8;
+}
+
+.magic-dust-8 {
+    --random-x: 0.9;
+    --random-y: 0.1;
+}
