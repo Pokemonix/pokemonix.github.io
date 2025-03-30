@@ -6,7 +6,7 @@
 
 
 .transaction-container {
-    max-width: 800px;
+    max-width: 1400px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -23,7 +23,7 @@
 .transaction-card {
     background-color: white;
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-left: 4px solid #ffcb05;
@@ -47,7 +47,7 @@
 .transaction-details {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 15px;
+    gap: 80px;
 }
 
 .detail-section h3 {
