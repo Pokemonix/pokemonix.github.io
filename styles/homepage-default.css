@@ -16,7 +16,6 @@
   --loader-color: #b32525;
   --default-text-color: #ffffff;
   --secondary-text-color: #000000;
- 
   --background: #5d5d5d;
   --navbar-width: 256px;
   --navbar-width-min: 80px;
@@ -25,6 +24,7 @@
   --navbar-light-primary: #f5f6fa; 
   --navbar-light-secondary: #8392a5;
   --navbar-text-color: #FFFFFF; 
+  --nav-title-logo-font: "Lilita One", sans-serif;
 }
 
 html {
@@ -304,6 +304,10 @@ label[for="nav-toggle"] {
 #nav-bar .fas {
   min-width: 3rem;
   text-align: center;
+}
+
+#nav-logo-title {
+  font-family: var(--nav-title-logo-font);
 }
 
 /* Main Content */
