@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Pokémon Go - Login</title>
-    <link rel="stylesheet" href="style-login.css" />
+    <title>Pokémon Go | Login</title>
+    <link rel="stylesheet" href="/styles/style-login.css" />
 </head>
 
 <body>
@@ -61,20 +61,21 @@
             <div class="login-container">
                 <!-- Niantic Logo and Pokemonix -->
                 <div class="logo">
-                    <img id="niantic" src="img/niantic-logo.png" alt="Niantic Logo" />
+                    <img id="niantic" src="/assets/registration-page-images/niantic-logo.png" alt="Niantic Logo" />
                     <div class="vl"></div>
-                    <img id="pokemonix" src="img/pokemonix-logo.png" alt="Pokemonix" />
+                    <img id="pokemonix" src="/assets/registration-page-images/pokemonix-logo.png" alt="Pokemonix" />
                 </div>
                 <h2>Sign In</h2>
                 <input type="email" id="email" placeholder="Email" />
                 <input type="password" id="password" placeholder="Password" />
                 <button onclick="login()">Login</button>
-                <p>Don't have a Pokémon GO account? <a href="registration_page/index.html">Make one today!</a></p>
+                <p>Don't have a Pokémon GO account? <a href="/pages/registration-page.html">Make one today!</a></p>
             </div>
         </div>
     </div>
 
-    <script src="script-login.js"></script>
+    
+    <script src="/javascript/script-login.js"></script>
 </body>
 
 </html>
