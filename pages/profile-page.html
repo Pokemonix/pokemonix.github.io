@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,23 +17,27 @@
   <div id="nav-bar">
     <input id="nav-toggle" type="checkbox" checked />
     <div id="nav-header">
-      <a id="nav-title" href="#" target="_blank"><i class="fas fa-shopping-cart"></i> Pokemonix</a>
+      <a id="nav-title" href="#" target="_blank"
+        ><img src="https://i.ibb.co/LMPWvdL/pokemonix-light-logo.png" style="width: 50px; height: 50px"></i> <span id="nav-logo-title">Pokemonix</span></a
+      >
       <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
     </div>
     <div id="nav-content">
       <div class="nav-button" onclick="navigateTo('homepage.html')">
         <i class="fas fa-house-chimney"></i><span>Home</span>
       </div>
-      <div class="nav-button" onclick="navigateTo('pages/products.html')">
-        <i class="fas fa-box"></i>
+
+      <div class="nav-button" onclick="navigateTo('cart.html')"> 
+        <i class="fas fa-cart-shopping"></i>
         <span>Cart</span>
         <p class="cart-item-count"></p>
       </div>
+
       <div class="nav-button" onclick="navigateTo('transaction.html')">
-        <i class="fas fa-comment"></i><span>Trasaction</span>
+        <i class="fas fa-exchange"></i><span>Transactions</span>
       </div>
       <div class="nav-button" onclick="navigateTo('profile-page.html')">
-        <i class="fas fa-user"></i><span>About</span>
+        <i class="fas fa-user"></i><span>Profile</span>
       </div>
     </div>
   </div>
@@ -46,95 +49,145 @@
           <img src="/assets/profile-images/user.png" alt="User Icon" class="user-img">
         </div>
         <div class="profile-info">
-          <h1>Ash Gerones</h1>
-          <p class="title">Pokémonix Go Pro</p>
-          <p class="location">Muzon, SJDM</p>
+          <h1>Ashley Quiban</h1>
+          <span class="title-username">Username</span>
+          <p class="title"><img src="/assets/transaction-images/Poke-coin.png" alt="PokeCoins" class="coin-img"> 0 PokeCoins</p>
         </div>
       </div>
-
+      
       <div class="profile-content">
-        <div class="profile-details">
-          <div class="social-links">
-            <div class="social-item">
-              <span class="social-label">Twitter</span>
-              <span class="social-value">@ashgerones</span>
-            </div>
-            <div class="social-item">
-              <span class="social-label">Instagram</span>
-              <span class="social-value">ash_gerones</span>
-            </div>
-            <div class="social-item">
-              <span class="social-label">Facebook</span>
-              <span class="social-value">ash.gerones</span>
-            </div>
-          </div>
-
+        <!-- Left Column -->
+        <div class="profile-section">
           <div class="personal-info">
             <div class="info-item">
               <span class="info-label">Full Name</span>
-              <span class="info-value">Ash Gerones</span>
+              <span class="info-value">Ashley Quiban</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">In-Game Name</span>
+              <span class="info-value">ashballz</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">User ID</span>
+              <span class="info-value">202312025</span>
             </div>
             <div class="info-item">
               <span class="info-label">Email</span>
               <span class="info-value">ash@pokemonix.com</span>
             </div>
             <div class="info-item">
-              <span class="info-label">Phone</span>
-              <span class="info-value">(63) 12 345 6789</span>
-            </div>
-            <div class="info-item">
-              <span class="social-label">Mobile</span>
-              <span class="social-value">+63 96 5691-2338</span>
-            </div>
-            <div class="info-item">
-              <span class="info-label">Address</span>
-              <span class="info-value">Muzon, SJDM</span>
+              <span class="info-label">Password</span>
+              <span class="info-value">*************</span>
             </div>
           </div>
 
           <button class="btn-edit">Edit Profile</button>
+          
+          <div class="profile-progress">
+            <h3><i class="fas fa-tasks"></i> Pokémonix Collection Status</h3>
+            <div class="progress-item">
+              <span class="progress-name">Pokémon GO Fest 2025: Global Ticket</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 10%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <span class="progress-name">Ultra Raid Box</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 20%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <span class="progress-name">Might and Mastery Box</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 10%"></div>
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <!-- Right Column -->
+        <div class="profile-section">
+          <div class="order-history-container">
+            <div class="order-history-header">
+              <h1>Transaction History</h1>
+            </div>
 
-        <div class="profile-projects">
-          <h3><i class="fas fa-tasks"></i> Pokémonix Collection Status</h3>
-          <div class="project-item">
-            <span class="project-name">Pokémon GO Fest 2025: Global Ticket</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 10%"></div>
-            </div>
-          </div>
-          <div class="project-item">
-            <span class="project-name">Ultra Raid Box</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 20%"></div>
-            </div>
-          </div>
-          <div class="project-item">
-            <span class="project-name">Might and Mastery Box</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 10%"></div>
+            <table class="order-history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Item</th>
+                  <th>Order ID</th>
+                  <th>Transaction Number</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>March 29, 2024</td>
+                  <td>Pokémon GO Fest 2025: Global Ticket</td>
+                  <td>P0-20240329-000</td>
+                  <td>TN-20240329-001</td>
+                  <td class="status-input">Completed</td>
+                </tr>
+                <tr>
+                  <td>October 16, 2024</td>
+                  <td>Ultra Raid Box</td>
+                  <td>P0-20241016-001</td>
+                  <td>TN-20241016-002</td>
+                  <td class="status-input">Completed</td>
+                </tr>
+                <tr>
+                  <td>November 02, 2024</td>
+                  <td>Might and Mastery Box</td>
+                  <td>P0-2021102-002</td>
+                  <td>TN-2021102-003</td>
+                  <td class="status-input">Completed</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="cart-items-section">
+              <h2>Cart Items</h2>
+              <div class="cart-item">
+                <img src="/assets/profile-images/GO-Rocket-Box.png" alt="Bug Out Ultra Ticket Box" class="cart-item-img">
+                <div class="cart-item-details">
+                  <h3>GO Rocket Box</h3>
+                  <p class="cart-item-type">One Time Only</p>
+                  <p class="cart-item-price">₱289.00</p>
+                </div>
+              </div>
+              <div class="cart-item">
+                <img src="/assets/profile-images/Ultra-Raid-Box.png" alt="Bug Out Ultra Ticket Box" class="cart-item-img">
+                <div class="cart-item-details">
+                  <h3>Ultra Raid Box</h3>
+                  <p class="cart-item-type">One Time Only</p>
+                  <p class="cart-item-price">₱149.00</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </main>
 
-    <footer class="footer py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <p class="copyright-disclaimer">© 2025 Pokemonix Web Store. The images used are the property of Niantic.
-              This project is for educational purposes only and no copyright infringement is intended.</p>
-            <div class="footer-links mt-2">
-              <a href="pages/privacy.html">Privacy Policy</a> |
-              <a href="pages/terms.html">Terms of Service</a> |
-              <a href="pages/contact.html">Contact Us</a>
-            </div>
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="copyright-disclaimer">© 2025 Pokemonix Web Store. The images used are the property of Niantic.
+            This project is for educational purposes only and no copyright infringement is intended.</p>
+          <div class="footer-links mt-2">
+            <a href="pages/privacy.html">Privacy Policy</a> |
+            <a href="pages/terms.html">Terms of Service</a> |
+            <a href="pages/contact.html">Contact Us</a>
           </div>
         </div>
       </div>
-    </footer>
-  </main>
+    </div>
+  </footer>
 
   <div class="web-loader"></div>
   <script src="/javascript/default.js"></script>
@@ -144,5 +197,4 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
