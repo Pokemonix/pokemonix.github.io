@@ -1,4 +1,6 @@
 /*  The following code here uses bootstrap templates */
+
+/* Main Layout */
 main {
   margin-left: var(--navbar-width-min);
   transition: margin-left 0.2s;
@@ -10,7 +12,8 @@ main {
   margin-left: var(--navbar-width);
 }
 
-/* Carousel styling */
+
+/* Intro Section & Carousel styling */
 .intro-greeting {
   height: auto;
   min-height: 300px;
@@ -30,293 +33,43 @@ main {
 }
 
 .carousel-caption {
-  background-color: #00000080;
-  padding: 20px;
-  border-radius: 8px;
+  background-color: rgba(52, 102, 175, 0.8);
+  border: 3px solid white;
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Featured Items Section */
-.featured-items {
-  padding: 60px 0;
-  background: #f8f9fa;
-  color: #333;
-}
-
-.featured-item {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px #0000001a;
-  transition: transform 0.3s ease;
-  height: 100%;
-}
-
-.featured-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.featured-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-.featured-item-content {
-  padding: 15px;
-}
-
-.featured-item-price {
+.carousel-caption h2 {
+  color: white;
   font-weight: bold;
-  color: #ff3e3e;
-  font-size: 1.1rem;
-}
-
-.featured-item-title {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #333;
-  min-height: 50px;
-}
-
-.featured-items h2 {
-  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   position: relative;
-  padding-bottom: 15px;
+  padding-left: 30px;
 }
 
-.featured-items h2::after {
+.carousel-caption h2::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #3466af;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(
+    to bottom,
+    #ff3e3e 0%,
+    #ff3e3e 50%,
+    #fff 50%,
+    #fff 100%
+  );
+  border-radius: 50%;
+  border: 2px solid #333;
 }
 
-/* Category Slider for Featured Items */
-.category-slider {
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.category-btn {
-  padding: 8px 16px;
-  background-color: #f0f0f0;
-  border: 2px solid transparent;
-  border-radius: 20px;
-  color: #666;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.category-btn:hover {
-  background-color: #e0e0e0;
-}
-
-.category-btn.active {
-  background-color: #3466af;
-  color: white;
-  border-color: #2a559c;
-}
-
-/* Category Content Styling */
-.category-content {
-  display: none;
-}
-
-.category-content.active {
-  display: block;
-}
-
-/* Enhanced Featured Items Styling */
-.featured-item {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  position: relative;
-}
-
-.featured-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.featured-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-/* Pokecoin Items Styling */
-#pokecoins .featured-item img {
-  height: 180px;
-  background-color: #f0f8ff;
-}
-
-/* Daily Bundle Styling */
-.daily-bundle {
-  border: 2px solid #ff3e3e;
-  transition: all 0.3s ease;
-}
-
-.daily-bundle:hover {
-  box-shadow: 0 10px 20px rgba(255, 62, 62, 0.3);
-}
-
-.daily-bundle img {
-  height: 250px;
-}
-
-.daily-bundle-header {
-  background: linear-gradient(135deg, #ff3e3e, #ff7676);
-  color: white;
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.daily-bundle-header h4 {
-  margin: 0;
-  font-weight: 700;
-}
-
-.bundle-contents {
-  background-color: #f5f5f5;
-  border-radius: 6px;
-  padding: 10px 15px;
-  margin: 10px 0;
-}
-
-.bundle-contents ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.price-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0;
-}
-
-.original-price {
-  text-decoration: line-through;
-  color: #999;
-  margin: 0;
-}
-
-.discount-tag {
-  background-color: #ff3e3e;
-  color: white;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.timer-section {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.countdown {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  #pokecoins .col-md-4 {
-    margin-bottom: 20px;
-  }
-
-  .daily-bundle {
-    max-width: 100%;
-  }
-}
-
-/* Projects/Collections Section */
-.body-projects {
-  min-height: 500px;
-  width: 100%;
-  background: #141414;
-  position: relative;
-  padding: 40px 0;
-}
-
-.body-projects img {
-  border-radius: 10px;
-  box-shadow: 0 5px 15px #0000004d;
-}
-
-/* Contact Section */
-.body-contact {
-  min-height: 500px;
-  width: 100%;
-  background: #393939;
-  position: relative;
-  padding: 40px 0;
-}
-
-.body-contact .input-group {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.body-contact .btn-primary {
-  background-color: #3466af;
-  border-color: #3466af;
-}
-
-.body-contact .btn-primary:hover {
-  background-color: #2a559c;
-  border-color: #2a559c;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .carousel-item {
-    height: 300px;
-  }
-
-  .featured-item-title {
-    min-height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-item {
-    height: 250px;
-  }
-
-  .carousel-caption {
-    padding: 10px;
-  }
-
-  .carousel-caption h2 {
-    font-size: 1.5rem;
-  }
-
-  .featured-items .col-md-3 {
-    margin-bottom: 20px;
-  }
+.carousel-caption p {
+  color: #f0f0f0;
+  font-weight: 500;
 }
 
 /* Fix for images in carousel */
@@ -331,267 +84,10 @@ main {
   display: block;
 }
 
-/* To ensure images are visible with proper dimensions */
 .carousel-img-container {
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-/* Footer styling */
-.footer {
-  background-color: #141414;
-  color: #f8f9fa;
-  padding: 30px 0;
-  width: 100%;
-  margin-left: 0;
-}
-
-.copyright-disclaimer {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: #3466af;
-  text-decoration: none;
-  margin: 0 8px;
-  font-size: 0.85rem;
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #4e7bc7;
-  text-decoration: underline;
-}
-
-/* Product Modal Styles */
-.product-modal {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: #00000066;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-modal-content {
-  background-color: #fefefe;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
-  position: relative;
-  box-shadow: 0 4px 6px #0000001a;
-}
-
-.product-modal-close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.product-modal-close:hover {
-  color: black;
-}
-
-.product-modal-image {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.product-modal-image img {
-  max-width: 250px;
-  max-height: 250px;
-  object-fit: contain;
-}
-
-.product-modal-details {
-  text-align: center;
-}
-
-.product-modal-details h3 {
-  margin-bottom: 10px;
-}
-
-.product-modal-price {
-  font-size: 1.2rem;
-  color: #ff3e3e;
-  margin-bottom: 15px;
-}
-
-.cart-notification {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #ff3e3e;
-  color: white;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1100;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
-  overflow: hidden;
-  font-size: 0.8rem;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-}
-
-.cart-item-count {
-  background-color: #ff3e3e;
-  color: white;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  left: 40%;
-  font-size: 0.6rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
-
-.cart-item-count.active {
-  opacity: 1;
-}
-
-.col-md-3 {
-  cursor: pointer;
-}
-
-/* Updated Modal Styles to Match Cards */
-.product-modal-content {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 0;
-  max-width: 500px;
-  width: 90%;
-}
-
-.product-modal-header {
-  position: relative;
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.product-modal-close {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  color: #666;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.product-modal-close:hover {
-  color: #ff3e3e;
-}
-
-.product-modal-image {
-  background-color: #f9f9f9;
-  padding: 20px;
-  text-align: center;
-}
-
-.product-modal-image img {
-  max-width: 100%;
-  height: 250px;
-  object-fit: contain;
-}
-
-.product-modal-details {
-  padding: 20px;
-}
-
-.product-modal-details h3 {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.product-modal-description {
-  color: #666;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
-}
-
-.product-modal-price {
-  font-weight: bold;
-  color: #ff3e3e;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.product-modal-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.product-modal-buttons button {
-  flex: 1;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.add-to-cart-btn {
-  background-color: #3466af;
-  color: white;
-  border: none;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #2a559c;
-}
-
-.continue-shopping-btn {
-  background-color: white;
-  color: #333;
-  border: 1px solid #ddd;
-}
-
-.continue-shopping-btn:hover {
-  background-color: #f5f5f5;
 }
 
 /* Pokemon-themed Carousel Controls */
@@ -700,7 +196,6 @@ main {
   width: 50px;
   height: 50px;
   background-color: #fff;
-
   border: 2px solid #3466af !important;
   opacity: 0.8;
   margin: 0 5px;
@@ -761,50 +256,561 @@ main {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Make carousel captions more Pokemon-themed */
-.carousel-caption {
-  background-color: rgba(52, 102, 175, 0.8);
-  border: 3px solid white;
-  border-radius: 15px;
-  padding: 15px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+/* Featured Items Section */
+.featured-items {
+  padding: 60px 0;
+  background: #f8f9fa;
+  color: #333;
 }
 
-.carousel-caption h2 {
-  color: white;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.featured-items h2 {
+  font-weight: 700;
   position: relative;
-  padding-left: 30px;
+  padding-bottom: 15px;
 }
 
-.carousel-caption h2::before {
+.featured-items h2::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(
-    to bottom,
-    #ff3e3e 0%,
-    #ff3e3e 50%,
-    #fff 50%,
-    #fff 100%
-  );
-  border-radius: 50%;
-  border: 2px solid #333;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #3466af;
 }
 
-.carousel-caption p {
-  color: #f0f0f0;
+/* Featured Item Styling */
+.featured-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.featured-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.featured-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.featured-item-content {
+  padding: 15px;
+}
+
+.featured-item-price {
+  font-weight: bold;
+  color: #ff3e3e;
+  font-size: 1.1rem;
+}
+
+.featured-item-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  min-height: 50px;
+}
+
+/* Category Slider for Featured Items */
+.category-slider {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.category-btn.active {
+  background-color: #3466af;
+  color: white;
+  border-color: #2a559c;
+}
+
+/* Category Content Styling */
+.category-content {
+  display: none;
+}
+
+.category-content.active {
+  display: block;
+}
+
+/* Pokecoin Items Styling */
+#pokecoins .featured-item img {
+  height: 180px;
+  background-color: #f0f8ff;
+}
+
+/* Daily Bundle Styling */
+.daily-bundle {
+  border: 2px solid #ff3e3e;
+  transition: all 0.3s ease;
+}
+
+.daily-bundle:hover {
+  box-shadow: 0 10px 20px rgba(255, 62, 62, 0.3);
+}
+
+.daily-bundle img {
+  height: 250px;
+}
+
+.daily-bundle-header {
+  background: linear-gradient(135deg, #ff3e3e, #ff7676);
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.daily-bundle-header h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.bundle-contents {
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.bundle-contents ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin: 0;
+}
+
+.discount-tag {
+  background-color: #ff3e3e;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.timer-section {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.countdown {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Projects/Collections Section */
+.body-projects {
+  min-height: 500px;
+  width: 100%;
+  background: #141414;
+  position: relative;
+  padding: 40px 0;
+}
+
+.body-projects img {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #0000004d;
+}
+
+/* Contact Section */
+.body-contact {
+  min-height: 500px;
+  width: 100%;
+  background: #393939;
+  position: relative;
+  padding: 40px 0;
+}
+
+.body-contact .input-group {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.body-contact .btn-primary {
+  background-color: #3466af;
+  border-color: #3466af;
+}
+
+.body-contact .btn-primary:hover {
+  background-color: #2a559c;
+  border-color: #2a559c;
+}
+
+/* Pokémon GO Download Banner Styles */
+.pokemon-go-download-banner {
+  color: #1f1f1f;
+  margin: 20px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.pokemon-go-download-banner h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  color: #1c2c5f; /* Pokémon blue */
+}
+
+.pokemon-go-download-banner p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.app-download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-download {
+  padding: 0;
+  background: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* App Store Button */
+
+.app-store-btn {
+  display: flex;
+  align-items: center;
+  background-color: #1c2c5f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  min-width: 160px;
+}
+
+.app-store-icon {
+  margin-right: 8px;
+}
+
+.app-store-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-store-text .small-text {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.app-store-text .large-text {
+  font-size: 1.1rem;
   font-weight: 500;
+  line-height: 1.2;
 }
 
-/* Carousel Responsiveness */
-/* Responsive adjustments for Pokemon UI */
+/* Google Play Button */
+.play-store-btn {
+  display: flex;
+  align-items: center;
+  background-color: #1c2c5f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  min-width: 160px;
+}
+
+.play-store-icon {
+  margin-right: 8px;
+}
+
+.play-store-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.play-store-text .small-text {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.play-store-text .large-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.download-card-image {
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px #1c2c5f;
+  transition: transform 0.3s ease;
+
+}
+
+.download-card-image:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+.pokemon-go-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+  border-radius: 12px;
+}
+
+/* For responsive layout */
+@media (max-width: 767px) {
+  .download-card-image {
+    margin: 20px auto;
+    height: 350px;
+  }
+}
+/* Additional animation for the image */
+
+
+/* Product Modal Styles */
+.product-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #00000066;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-modal-content {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+}
+
+.product-modal-header {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #666;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.product-modal-close:hover {
+  color: #ff3e3e;
+}
+
+.product-modal-image {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-modal-image img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.product-modal-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-modal-details h3 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-modal-description {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.product-modal-price {
+  font-weight: bold;
+  color: #ff3e3e;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.product-modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.product-modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #3466af;
+  color: white;
+  border: none;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2a559c;
+}
+
+.continue-shopping-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Cart Notification Styles */
+.cart-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff3e3e;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+.cart-item-count {
+  background-color: #ff3e3e;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  left: 40%;
+  font-size: 0.6rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.cart-item-count.active {
+  opacity: 1;
+}
+
+.col-md-3 {
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 992px) {
+  .carousel-item {
+    height: 300px;
+  }
+
+  .featured-item-title {
+    min-height: auto;
+  }
+  
   .carousel-caption h2::before {
     width: 16px;
     height: 16px;
@@ -816,6 +822,44 @@ main {
 }
 
 @media (max-width: 768px) {
+  .carousel-item {
+    height: 250px;
+  }
+
+  .carousel-caption {
+    padding: 10px;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .featured-items .col-md-3 {
+    margin-bottom: 20px;
+  }
+
+  #pokecoins .col-md-4 {
+    margin-bottom: 20px;
+  }
+
+  .daily-bundle {
+    max-width: 100%;
+  }
+  
+  .pokemon-go-download-banner h2 {
+    font-size: 1.8rem;
+  }
+  
+  .pokemon-go-download-banner p {
+    font-size: 1rem;
+  }
+  
+  .download-card-image {
+    max-width: 250px;
+    height: 350px;
+    margin-top: 20px;
+  }
+  
   .carousel-control-prev-icon::before,
   .carousel-control-next-icon::before {
     width: 18px;
@@ -836,10 +880,6 @@ main {
   .carousel-caption h2::before {
     width: 14px;
     height: 14px;
-  }
-
-  .carousel-caption {
-    padding: 10px;
   }
 
   .carousel-caption .btn {
