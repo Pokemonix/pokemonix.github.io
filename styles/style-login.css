@@ -179,10 +179,9 @@ input {
     padding: 15px;
     margin: 12px 0;
     border: 2px solid #21386e;
-    ;
     border-radius: 10px;
-    font-family: "Inter", sans-serif;
     font-size: 1rem;
+    font-family: "Afacad Flux", serif;
 }
 
 /* Style for the Sign-in Buttons */
