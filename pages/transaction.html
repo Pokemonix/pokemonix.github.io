@@ -23,28 +23,33 @@
     ></script>
 </head>
 <body>
-    <div id="nav-bar">
-        <input id="nav-toggle" type="checkbox" checked/>
-        <div id="nav-header">
-            <a id="nav-title" href="#"><i class="fas fa-shopping-cart"></i> Pokemonix</a>
-            <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
-        </div>
-        <div id="nav-content">
-            <div class="nav-button" onclick="navigateTo('homepage.html')">
-                <i class="fas fa-house-chimney"></i><span>Home</span>
-            </div>
-            <div class="nav-button" onclick="navigateTo('cart.html')">
-                <i class="fas fa-box"></i><span>Cart</span>
-                <p class="cart-item-count"></p>
-            </div>
-            <div class="nav-button" onclick="navigateTo('transaction.html')">
-                <i class="fas fa-comment"></i><span>Transaction</span>
-            </div>
-            <div class="nav-button" onclick="navigateTo('profile-page.html')">
-                <i class="fas fa-user"></i><span>Profile</span>
-            </div>
-        </div>
+  <div id="nav-bar">
+    <input id="nav-toggle" type="checkbox" checked />
+    <div id="nav-header">
+      <a id="nav-title" href="#" target="_blank"
+        ><img src="https://i.ibb.co/LMPWvdL/pokemonix-light-logo.png" style="width: 50px; height: 50px"></i> <span id="nav-logo-title">Pokemonix</span></a
+      >
+      <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
     </div>
+    <div id="nav-content">
+      <div class="nav-button" onclick="navigateTo('homepage.html')">
+        <i class="fas fa-house-chimney"></i><span>Home</span>
+      </div>
+
+      <div class="nav-button" onclick="navigateTo('cart.html')"> 
+        <i class="fas fa-cart-shopping"></i>
+        <span>Cart</span>
+        <p class="cart-item-count"></p>
+      </div>
+
+      <div class="nav-button" onclick="navigateTo('transaction.html')">
+        <i class="fas fa-exchange"></i><span>Transactions</span>
+      </div>
+      <div class="nav-button" onclick="navigateTo('profile-page.html')">
+        <i class="fas fa-user"></i><span>Profile</span>
+      </div>
+    </div>
+  </div>
 
     <main class="order-history-container">
       <div class="transaction-container">
