@@ -26,7 +26,7 @@
       <input id="nav-toggle" type="checkbox" checked />
       <div id="nav-header">
         <a id="nav-title" href="#" target="_blank"
-          ><i class="fas fa-shopping-cart"></i> Pokemonix</a
+          ><img src="https://i.ibb.co/q3HbCrXS/pokemonix-logo.png" style="width: 50px; height: 50px"></i> <span id="nav-logo-title">Pokemonix</span></a
         >
         <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
       </div>
@@ -35,7 +35,7 @@
           <i class="fas fa-house-chimney"></i><span>Home</span>
         </div>
 
-        <div class="nav-button" onclick="navigateTo('pages/products.html')">
+        <div class="nav-button" href="addtocart_page/html"> 
           <i class="fas fa-cart-shopping"></i>
           <span>Cart</span>
           <p class="cart-item-count"></p>
@@ -161,7 +161,9 @@
 
       <section class="featured-items py-5">
         <div class="container">
-          <h2 id="quickShop" class="text-center mb-5" style="color: #333">Quick Shop</h2>
+          <h2 id="quickShop" class="text-center mb-5" style="color: #333">
+            Quick Shop
+          </h2>
 
           <!-- Category Slider -->
           <div class="category-slider">
@@ -299,7 +301,10 @@
                   class="featured-item"
                   onclick="showModal('Ultra Raid Box', 'Premium box with high-value items for serious trainers', '$19.99', 'https://i.ibb.co/8LFbMzmN/Ultra-Raid-Box.png')"
                 >
-                  <img src="https://i.ibb.co/8LFbMzmN/Ultra-Raid-Box.png" alt="Ultra Raid Box" />
+                  <img
+                    src="https://i.ibb.co/8LFbMzmN/Ultra-Raid-Box.png"
+                    alt="Ultra Raid Box"
+                  />
                   <div class="featured-item-content">
                     <h5 class="featured-item-title">Ultra Raid Box</h5>
                     <p class="featured-item-price">$19.99</p>
@@ -336,7 +341,10 @@
                   class="featured-item"
                   onclick="showModal('Egg Incubator', 'Essential items for raid battles and challenges', '$3.99', 'https://i.ibb.co/1YdK2zHq/Egg-Incubator.png')"
                 >
-                  <img src="https://i.ibb.co/1YdK2zHq/Egg-Incubator.png" alt="Egg Incubator" />
+                  <img
+                    src="https://i.ibb.co/1YdK2zHq/Egg-Incubator.png"
+                    alt="Egg Incubator"
+                  />
                   <div class="featured-item-content">
                     <h5 class="featured-item-title">Egg Incubator</h5>
                     <p class="featured-item-price">$3.99</p>
@@ -537,21 +545,36 @@
           </div>
         </div>
       </section>
-      <footer class="footer py-4">
+      <footer class="footer bg-dark text-white py-5">
         <div class="container">
-          <div class="row">
-            <div class="col-12 text-center">
-              <p class="copyright-disclaimer">
+          <div class="row align-items-center">
+            
+            <!-- Copyright Section -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+              <p class="copyright-disclaimer mb-0">
                 © 2025 Pokemonix Web Store. The images used are the property of
                 Niantic. This project is for educational purposes only and no
                 copyright infringement is intended.
               </p>
-              <div class="footer-links mt-2">
-                <a href="pages/privacy.html">Privacy Policy</a> |
-                <a href="pages/terms.html">Terms of Service</a> |
-                <a href="pages/contact.html">Contact Us</a>
+            </div>
+      
+            <!-- Image Slots -->
+            <div class="col-md-4 text-center">
+              <div class="d-flex justify-content-center gap-3">
+                <img src="https://i.ibb.co/q3HbCrXS/pokemonix-logo.png" alt="Pokemonix Logo" class="img-fluid rounded" style="width: 120px; height: 120px; object-fit: cover;">
+                <img src="https://i.ibb.co/PGgFKRQY/niantic-logo.png" alt="Niantic Logo" class="img-fluid rounded" style="width: 120px; height: 120px; object-fit: cover;">
               </div>
             </div>
+      
+            <!-- Footer Links -->
+            <div class="col-md-4 text-center text-md-end mt-4 mt-md-0">
+              <div class="footer-links">
+                <a href="pages/privacy.html" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                <a href="pages/terms.html" class="text-white text-decoration-none me-3">Terms of Service</a>
+                <a href="pages/contact.html" class="text-white text-decoration-none">Contact Us</a>
+              </div>
+            </div>
+      
           </div>
         </div>
       </footer>
