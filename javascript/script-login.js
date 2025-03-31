@@ -9,7 +9,6 @@ function login() {
         return;
     }
 
-    // Check if user exists (we now store users by IGN)
     let userFound = registeredUsers[ignInput];
 
     if (userFound && userFound.password === password) {
@@ -18,10 +17,4 @@ function login() {
     } else {
         alert("Invalid In-Game Name or password. Please try again.");
     }
-}
-
-// Function to handle third-party login buttons
-function displayMessage(provider) {
-    alert(`Signing in with ${provider}...`);
-    window.location.href = "../pages/homepage.html"; // Redirect to homepage
 }

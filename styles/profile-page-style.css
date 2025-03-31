@@ -133,6 +133,114 @@ main {
     background-color: #218838;
 }
 
+/* Pop-up Background */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Pop-up Content */
+.popup-content {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-btn {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ef233c;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #d90429;
+}
+
+/* Pop-up Title */
+.popup-content h2 {
+    color: #3466af;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+.popup-content label {
+    display: block;
+    font-weight: bold;
+    color: #3466af;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Input Fields */
+.popup-content input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: "Open Sans", sans-serif;
+}
+
+.popup-content input:focus {
+    border-color: #3466af;
+}
+
+/* Buttons */
+#save-profile, #cancel-profile {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Save Button */
+#save-profile {
+    background: #28a745;
+    color: white;
+}
+
+#save-profile:hover {
+    background: #218838;
+}
+
+/* Cancel Button */
+#cancel-profile {
+    background: #ef233c;
+    color: white;
+}
+
+#cancel-profile:hover {
+    background: #d90429;
+}
+
 /* Progress Section */
 .profile-progress {
     background-color: #f8f9fa;
