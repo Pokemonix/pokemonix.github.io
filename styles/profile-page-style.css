@@ -33,10 +33,18 @@ main {
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .profile-img {
     margin-right: 30px;
+    flex-shrink: 0;
 }
 
 .user-img {
@@ -73,11 +81,29 @@ main {
     margin-bottom: 15px;
 }
 
+.sign-out-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+}
+
+.sign-out-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
 /* Profile Content Layout */
 .profile-content {
     display: flex;
     gap: 30px;
     margin-top: 20px;
+    gap: 20px;
 }
 
 .profile-section {
@@ -425,13 +451,25 @@ main {
 
 @media (max-width: 768px) {
     .profile-header {
+        flex-wrap: wrap; 
+        text-align: center;
+        justify-content: center;
+    }
+
+    .profile-left {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .profile-img {
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    .sign-out-btn {
+        align-self: center;
+        margin-top: 10px;
     }
 
     .cart-item {
@@ -442,5 +480,24 @@ main {
     .cart-item-img {
         margin-right: 0;
         margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sign-out-btn {
+        align-self: center;
+        width: 100%;
+        max-width: 200px;
     }
 }
