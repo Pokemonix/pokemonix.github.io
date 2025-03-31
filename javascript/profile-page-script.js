@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const userIdElement = document.querySelector(".info-value.user-id");
     const emailElement = document.querySelector(".info-value.email"); 
 
+    // Profile header elements
+    const titleNameElement = document.getElementById("title-name");
+    const titleUsernameElement = document.querySelector(".title-username");
+
     // Retrieve logged-in user
     let loggedInIGN = localStorage.getItem("loggedInUser");
     let users = JSON.parse(localStorage.getItem("users")) || {};
@@ -33,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ignElement.textContent = userData.ign || "N/A";
         userIdElement.textContent = userData.playerId || "N/A"; 
         emailElement.textContent = userData.email || "N/A"; 
+
+        titleNameElement.textContent = userData.fullName || "User Pikachu"; 
+        titleUsernameElement.textContent = userData.ign || "Username"; 
     }    
 
     loadProfile();
@@ -91,6 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localStorage.setItem("users", JSON.stringify(users));
         localStorage.setItem("loggedInUser", newIGN);
+
+        titleNameElement.textContent = newName;
+        titleUsernameElement.textContent = newIGN;
 
         alert("Profile updated successfully!"); 
         location.reload(); 
