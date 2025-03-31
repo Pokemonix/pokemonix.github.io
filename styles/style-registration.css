@@ -99,19 +99,19 @@ input {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #ffcc00;
+    background-color: #ffcb05;
+    color: #21386e;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
     margin-top: 20px;
-    transition: margin-top 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #2a75bb;
+    background-color: #21386e;
     color: white;
 }
 
@@ -126,8 +126,8 @@ p a {
     font-weight: bold;
 }
 
-p a:hover {
-    text-decoration: underline;
+a:hover {
+    color: #ffcb05;
 }
 
 input.error {
