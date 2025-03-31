@@ -66,27 +66,48 @@
           <div class="personal-info">
             <div class="info-item">
               <span class="info-label">Full Name</span>
-              <span class="info-value">Ashley Quiban</span>
-            </div>
-            <div class="info-item">
+              <span class="info-value full-name"></span>
+          </div>
+          <div class="info-item">
               <span class="info-label">In-Game Name</span>
-              <span class="info-value">ashballz</span>
-            </div>
-            <div class="info-item">
+              <span class="info-value ign"></span>
+          </div>
+          <div class="info-item">
               <span class="info-label">User ID</span>
-              <span class="info-value">202312025</span>
-            </div>
-            <div class="info-item">
+              <span class="info-value user-id"></span>
+          </div>
+          <div class="info-item">
               <span class="info-label">Email</span>
-              <span class="info-value">ash@pokemonix.com</span>
-            </div>
-            <div class="info-item">
+              <span class="info-value email"></span>
+          </div>
+          <div class="info-item">
               <span class="info-label">Password</span>
-              <span class="info-value">*************</span>
-            </div>
+              <span class="info-value password">*************</span>        
           </div>
 
           <button class="btn-edit">Edit Profile</button>
+
+          <!-- Edit Profile Pop-up -->
+          <div id="edit-profile-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Edit Profile</h2>
+                <label>Full Name</label>
+                <input type="text" id="edit-name" required>
+                
+                <label>In-Game Name</label>
+                <input type="text" id="edit-ign" required>
+                
+                <label>Email</label>
+                <input type="email" id="edit-email" required>
+                
+                <label>Password</label>
+                <input type="password" id="edit-password">
+                
+                <button id="save-profile">Save Changes</button>
+                <button id="cancel-profile">Cancel</button>
+            </div>
+        </div>        
           
           <div class="profile-progress">
             <h3><i class="fas fa-tasks"></i> Pokémonix Collection Status</h3>
