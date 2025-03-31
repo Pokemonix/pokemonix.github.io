@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeBtn = document.querySelector(".close-btn");
     const saveBtn = document.getElementById("save-profile");
     const cancelBtn = document.getElementById("cancel-profile");
+    const signOutButton = document.querySelector(".sign-out-btn");
 
     // Form fields
     const nameInput = document.getElementById("edit-name");
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const fullNameElement = document.querySelector(".info-value.full-name");
     const ignElement = document.querySelector(".info-value.ign");
     const userIdElement = document.querySelector(".info-value.user-id");
-    const emailElement = document.querySelector(".info-value.email"); 
+    const emailElement = document.querySelector(".info-value.email");
 
     // Profile header elements
     const titleNameElement = document.getElementById("title-name");
@@ -39,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
         emailElement.textContent = userData.email || "N/A"; 
 
         titleNameElement.textContent = userData.fullName || "User Pikachu"; 
-        titleUsernameElement.textContent = userData.ign || "Username"; 
-    }    
+        titleUsernameElement.textContent = userData.ign || "Username";
+    }
 
     loadProfile();
 
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let oldPlayerId = userData.playerId || "N/A";
+        let oldPlayerId = userData.playerId || "N/A"; 
         let oldPassword = userData.password;
 
         if (newIGN !== loggedInIGN) {
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fullName: newName,
             ign: newIGN,
             playerId: oldPlayerId,
-            email: newEmail, 
+            email: newEmail,
             password: oldPassword,
         };
 
@@ -104,5 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         alert("Profile updated successfully!"); 
         location.reload(); 
+    });
+
+    signOutButton.addEventListener("click", function () {
+        const confirmSignOut = confirm("Are you sure you want to sign out?");
+        if (confirmSignOut) {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "../index.html";
+        }
     });
 });

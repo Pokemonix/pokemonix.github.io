@@ -14,7 +14,7 @@ function login() {
     if (userFound && userFound.password === password) {
         localStorage.setItem("loggedInUser", ignInput);
         alert(`Welcome back, Trainer ${userFound.ign}!`);
-        window.location.href = "../pages/homepage.html"; // Redirect to homepage
+        window.location.href = "../pages/homepage.html";
     } else {
         alert("Invalid In-Game Name or password. Please try again.");
     }
@@ -23,23 +23,19 @@ function login() {
 // Handle third-party login
 function displayMessage(provider) {
     const providerIGN = `${provider}-ign`.toLowerCase();
-
     let registeredUsers = JSON.parse(localStorage.getItem("users")) || {};
 
     if (!registeredUsers[providerIGN]) {
-        // Generate a new user number
         function generateUserNumber() {
-            const randomID = Array.from({ length: 12 }, () =>
-                Math.floor(Math.random() * 10)
-            ).join("");
-            return `${randomID.slice(0, 4)} ${randomID.slice(4, 8)} ${randomID.slice(8, 12)}`;
+            return Array.from({ length: 12 }, () => Math.floor(Math.random() * 10)).join("").replace(/(\d{4})/g, "$1 ").trim();
         }
 
         registeredUsers[providerIGN] = {
             ign: providerIGN,
-            userId: generateUserNumber(),
-            fullName: `${provider} User`, // Default name
-            password: "", // No password needed for provider login
+            playerId: generateUserNumber(),
+            fullName: `${provider} User`,
+            email: "",
+            password: "",
         };
 
         localStorage.setItem("users", JSON.stringify(registeredUsers));
@@ -47,5 +43,5 @@ function displayMessage(provider) {
 
     localStorage.setItem("loggedInUser", providerIGN);
     alert(`Signing in with ${provider}...`);
-    window.location.href = "../pages/homepage.html"; // Redirect to homepage
+    window.location.href = "../pages/homepage.html";
 }
