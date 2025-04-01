@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function () {
+    if (!sessionStorage.getItem("alertShown")) {
+        alert("Please register first or sign in using the other options.");
+        sessionStorage.setItem("alertShown", "true");
+    }
+});
+
 function login() {
     const ignInput = document.getElementById("text").value.trim().toLowerCase();
     const password = document.getElementById("password").value;
