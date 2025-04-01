@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="payment-form-group">
                     <input type="email" placeholder=" " class="payment-form-control" id="email">
                     <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+                    <span class="error-message" id="email-error"></span>
                 </div>
                 <div class="payment-form-group">
                     <input type="password" placeholder=" " class="payment-form-control" id="gcash-password">
@@ -26,12 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="payment-form-group">
                     <input type="text" placeholder=" " class="payment-form-control" id="gcash-number">
                     <label for="gcash-number" class="payment-form-label payment-form-label-required">GCash Number</label>
+                    <span class="error-message" id="gcash-number-error"></span>
                 </div>`;
         } else { 
             formContent = `
                 <div class="payment-form-group">
                     <input type="email" placeholder=" " class="payment-form-control" id="email">
                     <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+                    <span class="error-message" id="email-error"></span>
                 </div>
                 <div class="payment-form-group">
                     <input type="text" placeholder=" " class="payment-form-control" id="card-number">
@@ -53,6 +56,51 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".button-container").insertAdjacentHTML('beforebegin', formContent);
     }
 
+    function showError(input, message) {
+        const errorElement = document.querySelector(`#${input.id}-error`);
+        if (errorElement) {
+            errorElement.textContent = message;
+            errorElement.style.color = "red";
+            input.classList.add("error");
+        }
+    }
+
+    function clearError(input) {
+        const errorElement = document.querySelector(`#${input.id}-error`);
+        if (errorElement) {
+            errorElement.textContent = "";
+            input.classList.remove("error");
+        }
+    }
+
+    function validateEmail() {
+        const emailInput = document.querySelector("#email");
+        if (!emailInput) return true; 
+
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(emailInput.value)) {
+            showError(emailInput, "Please enter a valid email address.");
+            return false;
+        } else {
+            clearError(emailInput);
+            return true;
+        }
+    }
+
+    function validateGCashNumber() {
+        const gcashInput = document.querySelector("#gcash-number");
+        if (!gcashInput) return true; 
+
+        const gcashRegex = /^09\d{9}$/; 
+        if (!gcashRegex.test(gcashInput.value)) {
+            showError(gcashInput, "Please enter a valid 11-digit GCash number starting with 09.");
+            return false;
+        } else {
+            clearError(gcashInput);
+            return true;
+        }
+    }
+
     paymentMethods.forEach(method => {
         method.addEventListener("change", function () {
             updatePaymentForm(this.id);
@@ -71,10 +119,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        const isEmailValid = validateEmail();
+        const isGCashValid = validateGCashNumber();
+
         if (isEmpty) {
-            alert("Please fill in all required fields before proceeding");
+            alert("Please fill in all required fields before proceeding.");
+        } else if (!isEmailValid || !isGCashValid) {
+            alert("Please correct the errors before proceeding.");
         } else {
             alert("Thank you. Enjoy your purchase!");
+            document.querySelector(".payment-form").style.display = "none"; 
+            window.location.href = "../pages/cart.html";
         }
     });
 
