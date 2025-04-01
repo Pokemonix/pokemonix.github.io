@@ -71,75 +71,76 @@
       <div class="profile-content">
         <!-- Left Column -->
         <div class="profile-section">
-          <div class="personal-info">
+          <div class="container">
+            <div class="personal-info">
+              <div class="info-item">
+                <span class="info-label">Full Name</span>
+                <span class="info-value full-name"></span>
+            </div>
             <div class="info-item">
-              <span class="info-label">Full Name</span>
-              <span class="info-value full-name"></span>
-          </div>
-          <div class="info-item">
-              <span class="info-label">In-Game Name</span>
-              <span class="info-value ign"></span>
-          </div>
-          <div class="info-item">
-              <span class="info-label">User ID</span>
-              <span class="info-value user-id"></span>
-          </div>
-          <div class="info-item">
-              <span class="info-label">Email</span>
-              <span class="info-value email"></span>
-          </div>
-          <div class="info-item">
-              <span class="info-label">Password</span>
-              <span class="info-value password">*************</span>        
-          </div>
-
-          <button class="btn-edit">Edit Profile</button>
-
-          <!-- Edit Profile Pop-up -->
-          <div id="edit-profile-popup" class="popup">
-            <div class="popup-content">
-                <span class="close-btn">&times;</span>
-                <h2>Edit Profile</h2>
-                <label>Full Name</label>
-                <input type="text" id="edit-name" required>
-                
-                <label>In-Game Name</label>
-                <input type="text" id="edit-ign" required>
-                
-                <label>Email</label>
-                <input type="email" id="edit-email" required>
-                
-                <label>Password</label>
-                <input type="password" id="edit-password">
-                
-                <button id="save-profile">Save Changes</button>
-                <button id="cancel-profile">Cancel</button>
+                <span class="info-label">In-Game Name</span>
+                <span class="info-value ign"></span>
             </div>
-        </div>        
-          
-          <div class="profile-progress">
-            <h3><i class="fas fa-tasks"></i> Pokémonix Collection Status</h3>
-            <div class="progress-item">
-              <span class="progress-name">Pokémon GO Fest 2025: Global Ticket</span>
-              <div class="progress">
-                <div class="progress-bar" style="width: 10%"></div>
+            <div class="info-item">
+                <span class="info-label">User ID</span>
+                <span class="info-value user-id"></span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Email</span>
+                <span class="info-value email"></span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Password</span>
+                <span class="info-value password">*************</span>        
+            </div>
+  
+            <button class="btn-edit">Edit Profile</button>
+  
+            <!-- Edit Profile Pop-up -->
+            <div id="edit-profile-popup" class="popup">
+              <div class="popup-content">
+                  <span class="close-btn">&times;</span>
+                  <h2>Edit Profile</h2>
+                  <label>Full Name</label>
+                  <input type="text" id="edit-name" required>
+                  
+                  <label>In-Game Name</label>
+                  <input type="text" id="edit-ign" required>
+                  
+                  <label>Email</label>
+                  <input type="email" id="edit-email" required>
+                  
+                  <label>Password</label>
+                  <input type="password" id="edit-password">
+                  
+                  <button id="save-profile">Save Changes</button>
+                  <button id="cancel-profile">Cancel</button>
               </div>
-            </div>
-            <div class="progress-item">
-              <span class="progress-name">Ultra Raid Box</span>
-              <div class="progress">
-                <div class="progress-bar" style="width: 20%"></div>
+          </div>        
+            
+            <div class="profile-progress">
+              <h3><i class="fas fa-tasks"></i> Pokémonix Collection Status</h3>
+              <div class="progress-item">
+                <span class="progress-name">Pokémon GO Fest 2025: Global Ticket</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 10%"></div>
+                </div>
               </div>
-            </div>
-            <div class="progress-item">
-              <span class="progress-name">Might and Mastery Box</span>
-              <div class="progress">
-                <div class="progress-bar" style="width: 10%"></div>
+              <div class="progress-item">
+                <span class="progress-name">Ultra Raid Box</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 20%"></div>
+                </div>
+              </div>
+              <div class="progress-item">
+                <span class="progress-name">Might and Mastery Box</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 10%"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
+                  
         <!-- Right Column -->
         <div class="profile-section">
           <div class="order-history-container">
@@ -205,6 +206,8 @@
             </div>
           </div>
         </div>
+          </div>
+
       </div>
     </div>
   </main>
