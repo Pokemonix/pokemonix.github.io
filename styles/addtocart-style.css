@@ -162,7 +162,6 @@ body {
   /*total container*/
   margin-top: 15px;
   flex: 1;
-  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 5px;
 }
@@ -179,7 +178,7 @@ body {
 }
 
 .cart-total p:not(:last-of-type) {
-  border-bottom: 1px solid #ccc;
+
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
