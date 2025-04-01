@@ -332,7 +332,7 @@ main {
 }
 
 .order-history-table th {
-    background-color: #3466af;
+    background-color: #303e6d;
     color: white;
     padding: 12px 15px;
     text-align: left;
@@ -355,7 +355,7 @@ main {
 
 .view-more {
     display: inline-block;
-    color: #007bff;
+    color: #303e6d;
     text-decoration: none;
     font-weight: 500;
     margin-top: 10px;
