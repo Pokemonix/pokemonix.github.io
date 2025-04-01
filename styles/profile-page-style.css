@@ -82,9 +82,9 @@ main {
 }
 
 .sign-out-btn {
-    background: none;
+    background-color: #ad5052;
     border: none;
-    color: rgb(255, 0, 0);
+    color: white;
     cursor: pointer;
     font-weight: 600;
     padding: 8px 12px;
@@ -94,7 +94,7 @@ main {
 }
 
 .sign-out-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #d90429;
     text-decoration: none;
 }
 
@@ -145,7 +145,7 @@ main {
 .btn-edit {
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #303e6d;
     color: white;
     border: none;
     border-radius: 5px;
@@ -156,7 +156,7 @@ main {
 }
 
 .btn-edit:hover {
-    background-color: #218838;
+    background-color: #617c40;
 }
 
 /* Pop-up Background */
@@ -192,13 +192,13 @@ main {
     right: 15px;
     font-size: 22px;
     font-weight: bold;
-    color: #ef233c;
+    color: #ad5052;
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .close-btn:hover {
-    color: #d90429;
+    color: #ad5052;
 }
 
 /* Pop-up Title */
@@ -249,7 +249,7 @@ main {
 
 /* Save Button */
 #save-profile {
-    background: #28a745;
+    background-color: #303e6d;
     color: white;
 }
 
@@ -259,7 +259,7 @@ main {
 
 /* Cancel Button */
 #cancel-profile {
-    background: #ef233c;
+    background: #ad5052;
     color: white;
 }
 
@@ -451,15 +451,16 @@ main {
 
 @media (max-width: 768px) {
     .profile-header {
-        flex-wrap: wrap; 
-        text-align: center;
+        flex-direction: column;
         justify-content: center;
+        text-align: center;
     }
 
     .profile-left {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 15px;
     }
 
     .profile-img {
@@ -470,13 +471,24 @@ main {
     .sign-out-btn {
         align-self: center;
         margin-top: 10px;
+        order: 2;
+    }
+
+    .order-history-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .order-history-header h1 {
+        font-size: 22px;
     }
 
     .cart-item {
         flex-direction: column;
         text-align: center;
     }
-
+    
     .cart-item-img {
         margin-right: 0;
         margin-bottom: 15px;
@@ -493,11 +505,67 @@ main {
     .profile-left {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .sign-out-btn {
         align-self: center;
         width: 100%;
-        max-width: 200px;
+        max-width: 120px;
+        margin-top: 15px;
+    }
+
+    .order-history-container {
+        padding: 15px;
+    }
+    
+    .order-history-header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .order-history-table {
+        display: block;
+        white-space: normal;
+    }
+    
+    .order-history-table thead {
+        display: none; 
+    }
+    
+    .order-history-table tbody {
+        display: block;
+    }
+    
+    .order-history-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    .order-history-table td {
+        display: flex;
+        text-align: right;
+        padding: 8px 10px;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    
+    .order-history-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .order-history-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        flex: 1;
+        color: #3466af;
+    }
+    
+    .view-more {
+        align-self: center;
+        margin-top: 10px;
     }
 }
