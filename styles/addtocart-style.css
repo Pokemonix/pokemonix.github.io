@@ -218,7 +218,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #a2d7d5;
+  background-color: #21386e;
   border-radius: 10px;
   width: 60%;
   height: auto;
@@ -234,6 +234,7 @@ body {
 
 .payment-right {
   min-width: 0;
+  color: #ffffff;
 }
 
 .payment-form {
@@ -267,13 +268,14 @@ body {
   border: 1px solid #a6a6a6;
   border-radius: 8px;
   margin-right: 12px;
+  background-color: #a6a6a6;
   cursor: pointer;
   position: relative;
   flex-shrink: 0;
 }
 
 input:checked+.payment-method-item {
-  border-color: #21386e;
+  border-color: #c20004;
 }
 
 input:checked+.payment-method-item::before {
@@ -284,7 +286,7 @@ input:checked+.payment-method-item::before {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: #21386e;
+  background-color: #c20004;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjAwMDcgMTUuMTcwOUwxOS4xOTMxIDUuOTc4NTJMMjAuNjA3MyA3LjM5MjczTDEwLjAwMDcgMTcuOTk5M0wzLjYzNjcyIDExLjYzNTRMNS4wNTA5MyAxMC4yMjEyTDEwLjAwMDcgMTUuMTcwOVoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMSkiPjwvcGF0aD48L3N2Zz4=");
   background-size: 12px;
   background-position: center;
@@ -319,11 +321,6 @@ input:checked+.payment-method-item::before {
   color: #a6a6a6;
   pointer-events: none;
   transition: all .1s ease-in-out;
-}
-
-.payment-form-control:focus {
-  outline: 1px solid #21386e;
-  border-color: #21386e;
 }
 
 .payment-form-control:focus+.payment-form-label,
@@ -363,7 +360,7 @@ input:checked+.payment-method-item::before {
 }
 
 .payment-form-submit-button {
-  background-color: #21386e;
+  background-color: #399794;
   border-radius: 5px;
   border: none;
   justify-content: center;
@@ -374,10 +371,6 @@ input:checked+.payment-method-item::before {
   font-size: 18px;
   transition: background-color 0.2s ease-in-out;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-.payment-form-submit-button:hover {
-  background-color: #21386e;
 }
 
 .payment-form-submit-button>i {
@@ -464,3 +457,5 @@ input:checked+.payment-method-item::before {
   font-size: 18px;
   color: #888;
 }
+
+
