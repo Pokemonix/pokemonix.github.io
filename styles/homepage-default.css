@@ -306,9 +306,6 @@ label[for="nav-toggle"] {
   text-align: center;
 }
 
-#nav-logo-title {
-  font-family: var(--nav-title-logo-font);
-}
 
 /* Main Content */
 main {
