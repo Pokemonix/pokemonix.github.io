@@ -168,7 +168,7 @@ function initializeAddToCartButtons() {
     });
   });
 }
-
+/*
 function showModal(name, description, price, imageSrc) {
   // Create modal elements
   const modal = document.createElement('div');
@@ -221,6 +221,7 @@ function showModal(name, description, price, imageSrc) {
   // Add to body
   document.body.appendChild(modal);
 }
+*/
 
 let cartItems = [];
 

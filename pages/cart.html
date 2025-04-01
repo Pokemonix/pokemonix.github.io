@@ -28,9 +28,7 @@
 
       <div class="nav-button" onclick="navigateTo('cart.html')">
         <i class="fas fa-cart-shopping"></i>
-        <span>Cart</span>
-        <p class="cart-item-count"></p>
-      </div>
+        <span>Cart</span>     </div>
 
       <div class="nav-button" onclick="navigateTo('transaction.html')">
         <i class="fas fa-exchange"></i><span>Transactions</span>
@@ -155,6 +153,104 @@
     proceedToPaymentBtn.addEventListener("click", showPayment);
     closePaymentBtn.addEventListener("click", hidePayment);
   </script>
+
+<script src="/javascript/cart-function.js"></script>
+<script>
+  // Function to render cart items
+  function renderCartItems() {
+    const cartItemsContainer = document.querySelector('.cart-items');
+    const subtotalElement = document.querySelector('.subtotal');
+    const grandTotalElement = document.querySelector('.grand-total');
+    
+    // Clear existing content
+    cartItemsContainer.innerHTML = '';
+    
+    // Get cart items
+    const items = cart.load();
+    
+    if (items.length === 0) {
+      cartItemsContainer.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+      subtotalElement.textContent = '$0.00';
+      grandTotalElement.textContent = '$0.00';
+      return;
+    }
+    
+    // Render each item
+    items.forEach(item => {
+      const itemTotal = (parseFloat(item.price.replace('$', '')) * item.quantity).toFixed(2);
+      
+      const itemElement = document.createElement('div');
+      itemElement.className = 'cart-item';
+      itemElement.innerHTML = `
+        <div class="cart-product">
+          <img src="${item.image}" alt="${item.name}">
+          <span>${item.name}</span>
+        </div>
+        <div class="cart-price">${item.price}</div>
+        <div class="cart-quantity">
+          <button class="quantity-btn minus" data-id="${item.id}">-</button>
+          <span>${item.quantity}</span>
+          <button class="quantity-btn plus" data-id="${item.id}">+</button>
+        </div>
+        <div class="cart-total">$${itemTotal}</div>
+        <div class="cart-remove">
+          <button class="remove-btn" data-id="${item.id}"><i class="bi bi-trash"></i></button>
+        </div>
+      `;
+      
+      cartItemsContainer.appendChild(itemElement);
+    });
+    
+    // Update totals
+    const total = cart.calculateTotal();
+    subtotalElement.textContent = `$${total}`;
+    grandTotalElement.textContent = `$${total}`;
+    
+    // Add event listeners to quantity and remove buttons
+    setupCartEvents();
+  }
+  
+  // Setup event listeners for cart interactions
+  function setupCartEvents() {
+    // Quantity adjustment
+    document.querySelectorAll('.quantity-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const id = this.getAttribute('data-id');
+        const item = cart.items.find(item => item.id === id);
+        
+        if (this.classList.contains('plus')) {
+          cart.updateQuantity(id, item.quantity + 1);
+        } else if (this.classList.contains('minus')) {
+          cart.updateQuantity(id, item.quantity - 1);
+        }
+        
+        renderCartItems();
+      });
+    });
+    
+    // Remove item
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const id = this.getAttribute('data-id');
+        cart.removeItem(id);
+        renderCartItems();
+      });
+    });
+  }
+  
+  // Initial render
+  document.addEventListener('DOMContentLoaded', function() {
+    renderCartItems();
+    
+    // Handle checkout button
+    document.getElementById('proceed-to-payment').addEventListener('click', function() {
+      if (cart.items.length === 0) {
+        alert('Your cart is empty!');
+        return false;
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
